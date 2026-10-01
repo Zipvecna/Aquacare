@@ -1,0 +1,2432 @@
+/* ==========================================================================
+   Aqua Care - The Water Treatment Company
+   UI Components Stylesheet (Matched to Logo Blue Theme)
+   ========================================================================== */
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 26px;
+  font-family: var(--font-heading);
+  font-size: 0.96rem;
+  font-weight: 700;
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-dark) 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 119, 182, 0.25);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 119, 182, 0.35);
+  background: linear-gradient(135deg, #0088cc 0%, #004580 100%);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--blue-primary);
+  border: 1.5px solid var(--blue-primary);
+  box-shadow: var(--shadow-sm);
+  border-radius: 12px;
+}
+
+.btn-secondary:hover {
+  background: var(--bg-surface-alt);
+  border-color: var(--blue-dark);
+  color: var(--blue-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 119, 182, 0.15);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 12px;
+}
+
+.btn-outline:hover {
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
+  background: var(--bg-surface-alt);
+}
+
+.btn-sm {
+  padding: 8px 18px;
+  font-size: 0.88rem;
+  border-radius: 10px;
+}
+
+.btn-lg {
+  padding: 14px 32px;
+  font-size: 1.02rem;
+  border-radius: 12px;
+}
+
+.btn-icon-only {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Premium motion for the homepage hero visual */
+.hero-visual {
+  isolation: isolate;
+}
+
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: -18%;
+  bottom: -18%;
+  left: -45%;
+  width: 42%;
+  background: linear-gradient(105deg, transparent 0%, rgba(144, 224, 239, 0.08) 28%, rgba(0, 180, 216, 0.24) 50%, rgba(255, 255, 255, 0.12) 66%, transparent 100%);
+  filter: blur(18px);
+  pointer-events: none;
+  transform: skewX(-14deg);
+  animation: heroLightFlow 10s ease-in-out infinite;
+}
+
+.hero-visual-image {
+  position: relative;
+  z-index: 0;
+  transform-origin: center center;
+  animation: heroImageBreathe 11s ease-in-out infinite;
+  transition: transform 0.8s ease-in-out;
+}
+
+.hero-visual-caption {
+  z-index: 2;
+}
+
+.hero-visual-eyebrow,
+.hero-visual-title,
+.hero-visual-cta {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: heroCaptionRise 0.8s ease-out forwards;
+}
+
+.hero-visual-eyebrow {
+  animation-delay: 0.15s;
+}
+
+.hero-visual-title {
+  animation-delay: 0.4s;
+}
+
+.hero-visual-cta {
+  animation-delay: 0.68s;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.hero-visual:hover .hero-visual-image {
+  animation-play-state: paused;
+  transform: scale(1.03);
+}
+
+.hero-visual:hover .hero-visual-cta {
+  box-shadow: 0 0 18px rgba(72, 202, 228, 0.38), 0 4px 14px rgba(0, 119, 182, 0.25);
+}
+
+@keyframes heroLightFlow {
+  0%, 100% { left: -45%; opacity: 0.45; }
+  50% { left: 108%; opacity: 0.8; }
+}
+
+@keyframes heroImageBreathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+@keyframes heroCaptionRise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-visual::before,
+  .hero-visual-image,
+  .hero-visual-eyebrow,
+  .hero-visual-title,
+  .hero-visual-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-visual:hover .hero-visual-image {
+    transform: none;
+  }
+}
+
+/* Surface & Cards */
+.glass-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue-navy), var(--blue-primary));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.glass-card:hover {
+  border-color: var(--border-blue);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.glass-card:hover::before {
+  opacity: 1;
+}
+
+/* Homepage Product Catalog photo cards */
+.glass-card.product-photo-card {
+  position: relative;
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 24px !important;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 18px;
+  background: transparent !important;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.18) !important;
+  transform: none !important;
+}
+
+.glass-card.product-photo-card::before {
+  display: none;
+}
+
+.glass-card.product-photo-card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/Boiler Water Chemical.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px);
+  content: '';
+  transition: transform 0.5s ease;
+}
+
+.glass-card.product-photo-card--cooling::after {
+  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/Cooling tower chemical.jpg');
+}
+
+.glass-card.product-photo-card--ro::after {
+  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/Ro water chemical.jpg');
+}
+
+.glass-card.product-photo-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.18) !important;
+  transform: none !important;
+}
+
+.glass-card.product-photo-card:hover::after {
+  transform: scale(1.06);
+}
+
+.product-photo-card > div:first-child {
+  display: inline-block;
+  margin-bottom: 12px !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(0, 119, 182, 0.9);
+  color: #fff !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.6px;
+}
+
+.product-photo-card h3 {
+  margin-bottom: 10px !important;
+  color: #fff !important;
+  font-size: 22px !important;
+}
+
+.product-photo-card p {
+  margin-bottom: 18px !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 14.5px !important;
+  line-height: 1.55;
+}
+
+.product-photo-card .btn-secondary.btn-sm {
+  padding: 10px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: none;
+  color: #fff;
+  font-weight: 700;
+  backdrop-filter: blur(4px);
+}
+
+.product-photo-card:hover .btn-secondary.btn-sm,
+.product-photo-card .btn-secondary.btn-sm:hover {
+  border-color: #fff;
+  background: #fff;
+  color: #0077b6;
+  transform: none;
+  box-shadow: none;
+}
+
+.industry-card {
+  --accent: var(--blue-primary);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0 0 24px;
+  text-align: center;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, #e3eef8);
+  border-radius: 20px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 14%, white), color-mix(in srgb, var(--accent) 6%, white));
+  box-shadow: 0 4px 20px rgba(11, 107, 184, .10);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.industry-card::before {
+  top: auto;
+  bottom: 0;
+  height: 4px;
+  background: var(--accent);
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.industry-card:hover,
+.industry-card:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 40%, #e3eef8);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(11, 107, 184, .22);
+}
+
+.industry-card:hover::before,
+.industry-card:focus-within::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.industry-card:focus-within {
+  outline: 3px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  outline-offset: 3px;
+}
+
+.industry-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 760px;
+  margin: 0 auto 44px;
+  padding: 18px 24px;
+  border: 1px solid #e3eef8;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(11, 107, 184, .10);
+}
+
+.industry-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0 18px;
+}
+
+.industry-stat + .industry-stat {
+  border-left: 1px solid #e3eef8;
+}
+
+.industry-stat-number {
+  color: #0B6BB8;
+  font-size: clamp(28px, 4.5vw, 40px);
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.industry-stat span {
+  color: #5B6B7C;
+  font-size: 13.5px;
+  text-align: center;
+}
+
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  align-items: stretch;
+}
+
+.industry-photo-wrap {
+  position: relative;
+  height: 135px;
+  overflow: hidden;
+}
+
+.industry-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 35% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(10, 37, 64, .45));
+  pointer-events: none;
+}
+
+.industry-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.industry-card:hover .industry-photo,
+.industry-card:focus-within .industry-photo {
+  transform: scale(1.1);
+}
+
+.industry-icon {
+  position: absolute;
+  left: 50%;
+  top: 103px;
+  width: 64px;
+  height: 64px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 4px solid color-mix(in srgb, var(--accent) 14%, white);
+  background: radial-gradient(circle at 35% 30%, var(--accent), #0B4F8A);
+  color: #fff;
+  font-size: 1.35rem;
+  box-shadow: 0 8px 18px rgba(0, 64, 108, 0.2);
+  z-index: 1;
+}
+
+.industry-card-body {
+  flex: 1;
+  padding: 42px 22px 0;
+}
+
+.industry-title {
+  font-size: 21px;
+  font-weight: 800;
+  color: #0A2540;
+  margin: 0;
+}
+
+.industry-title::after {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin: 10px auto 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  transition: width .35s ease;
+}
+
+.industry-card:hover .industry-title::after,
+.industry-card:focus-within .industry-title::after {
+  width: 64px;
+}
+
+.industry-description {
+  font-size: 14.5px;
+  color: #5B6B7C;
+  margin: 0;
+  line-height: 1.65;
+}
+
+@media (max-width: 520px) {
+  .industry-stats {
+    padding: 14px 4px;
+  }
+
+  .industry-stat {
+    padding: 0 4px;
+  }
+
+  .industry-stat span {
+    font-size: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .industry-card,
+  .industry-card::before,
+  .industry-photo,
+  .industry-title::after {
+    transition: none;
+  }
+}
+
+/* Core business cards */
+.core-business-heading {
+  color: var(--blue-navy);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.about-company-section {
+  background: #F3F8FC;
+  padding: 64px 0 72px;
+}
+
+.about-company-container {
+  width: min(1400px, 100%);
+  padding: 0 32px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.about-company-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+}
+
+.about-company-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  column-gap: 72px;
+  margin-bottom: 72px;
+  align-items: stretch;
+}
+
+.about-company-copy {
+  min-width: 0;
+  text-align: left;
+}
+
+.about-company-text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.about-company-copy h1 {
+  margin: 0 0 16px 0 !important;
+  padding: 0 0 6px 0 !important;
+  color: #0A2540;
+  font-size: clamp(38px, 4.5vw, 56px) !important;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2 !important;
+}
+
+.about-company-tagline {
+  margin: 0 0 32px 0 !important;
+  color: #0B6BB8;
+  font-size: clamp(20px, 2vw, 24px) !important;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.35 !important;
+  text-wrap: balance;
+}
+
+.about-company-copy .about-intro-lead,
+.about-company-copy .about-intro-secondary {
+  width: 100%;
+  max-width: none;
+  text-align: left;
+}
+
+.about-company-copy p {
+  margin: 0;
+}
+
+.about-intro-lead {
+  color: #0A2540;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.75 !important;
+  margin: 0 0 28px 0 !important;
+}
+
+.about-intro-lead strong {
+  font-weight: 800;
+}
+
+.about-intro-secondary {
+  margin-bottom: 24px !important;
+  color: #3E4E60;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.about-intro-callout {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  overflow: hidden;
+  margin: 0 0 44px;
+  padding: 32px 40px;
+  border: 0;
+  border-radius: 22px;
+  background: linear-gradient(120deg, #0A4F8F, #0B6BB8 40%, #19B5D8 70%, #0B6BB8);
+  background-size: 220% 220%;
+  animation: callout-gradient 12s ease-in-out infinite alternate;
+  box-shadow: 0 14px 34px rgba(11, 107, 184, .28);
+}
+
+.about-intro-callout::before,
+.about-intro-callout::after {
+  content: '';
+  position: absolute;
+  z-index: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .08);
+  pointer-events: none;
+}
+
+.about-intro-callout::before {
+  width: 260px;
+  height: 260px;
+  top: -80px;
+  right: -60px;
+  animation: drift 9s ease-in-out infinite alternate;
+}
+
+.about-intro-callout::after {
+  width: 200px;
+  height: 200px;
+  right: 120px;
+  bottom: -110px;
+  animation: drift 11s ease-in-out infinite alternate-reverse;
+}
+
+.about-intro-callout .bub {
+  position: absolute;
+  left: var(--b-left);
+  bottom: -40px;
+  z-index: 0;
+  width: var(--b-size);
+  height: var(--b-size);
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .14);
+  animation: rise var(--b-duration) linear var(--b-delay) infinite;
+}
+
+@keyframes callout-gradient {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+
+@keyframes rise {
+  0% { transform: translate(0, 0); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(22px, -280px); opacity: 0; }
+}
+
+@keyframes drift {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-26px, 18px); }
+}
+
+.about-intro-callout-icon {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 0 0 64px;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .16);
+  color: #fff;
+}
+
+.about-intro-callout-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.about-intro-callout p {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+.about-company-photo {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: 540px;
+  margin-right: 18px;
+  aspect-ratio: 4 / 3.3;
+  min-height: 380px;
+  overflow: hidden;
+  z-index: 1;
+  border: 4px solid transparent;
+  border-radius: 28px;
+  background: linear-gradient(#F3F8FC, #F3F8FC) padding-box, linear-gradient(135deg, #5FE0F5, #0B6BB8 50%, #0A4F8F) border-box;
+  box-shadow: 0 18px 44px rgba(10, 79, 143, .28);
+}
+
+.about-company-photo::before {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  z-index: 0;
+  border-radius: 38px;
+  background: linear-gradient(135deg, #19B5D8, #0B6BB8 55%, #0A4F8F);
+  filter: blur(26px);
+  opacity: .38;
+  pointer-events: none;
+}
+
+.about-company-photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(5, 38, 78, .96) 0%, rgba(10, 79, 143, .78) 20%, rgba(11, 107, 184, .4) 38%, rgba(25, 181, 216, .12) 55%, transparent 70%);
+}
+
+.about-company-photo img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 40% center;
+}
+
+.about-company-photo-sheen {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(125deg, rgba(255, 255, 255, .22), transparent 34%);
+}
+
+.about-company-photo-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  margin: 0;
+  padding: 8px 16px;
+  border: 1px solid var(--border-blue);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .95);
+  backdrop-filter: blur(8px);
+  color: var(--blue-navy);
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .about-company-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .about-company-photo {
+    min-height: 0;
+    max-width: 100%;
+    margin-right: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-company-photo::before {
+    inset: -8px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-company-section {
+    padding: 40px 0;
+  }
+
+  .about-company-container {
+    width: 100%;
+    padding: 0 32px;
+  }
+
+  .about-company-copy h1 {
+    font-size: clamp(38px, 4.5vw, 56px) !important;
+  }
+
+  .about-intro-lead {
+    font-size: 18px !important;
+  }
+
+  .about-intro-callout {
+    padding: 18px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .about-intro-callout p {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-company-photo img,
+  .about-intro-callout,
+  .about-intro-callout::before,
+  .about-intro-callout::after,
+  .about-intro-callout .bub {
+    transition: none;
+    animation: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .about-company-section {
+    background: #0B1B2E;
+  }
+
+  .about-company-copy h1,
+  .about-intro-lead,
+  .about-intro-callout {
+    color: #EAF4FF;
+  }
+
+  .about-intro-secondary {
+    color: #B4C6D8;
+  }
+
+  .about-intro-callout {
+    background: #12283F;
+  }
+
+  .about-company-photo {
+    background: linear-gradient(#0B1B2E, #0B1B2E) padding-box, linear-gradient(135deg, #5FE0F5, #0B6BB8 50%, #0A4F8F) border-box;
+  }
+}
+
+.core-business-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.core-business-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-left: 4px solid var(--blue-primary);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  color: var(--blue-navy);
+  min-height: 62px;
+  min-width: 0;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.core-business-card:hover {
+  border-color: var(--border-blue);
+  border-left-color: var(--blue-primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.core-business-card img {
+  width: 84px;
+  height: 74px;
+  flex: 0 0 84px;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform var(--transition-normal);
+}
+
+.core-business-card:hover img {
+  transform: scale(1.04);
+}
+
+.core-business-card-copy {
+  min-width: 0;
+  margin-left: 16px;
+}
+
+.core-business-card strong,
+.core-business-card span {
+  display: block;
+}
+
+.core-business-card strong {
+  color: inherit;
+  font-size: 0.98rem;
+  line-height: 1.4;
+}
+
+.core-business-card span {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Chemical Catalog Product Cards */
+.chemical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 28px;
+}
+
+.chem-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-normal);
+  position: relative;
+  box-shadow: var(--shadow-sm);
+}
+
+.chem-card:hover {
+  border-color: var(--border-blue);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 53, 102, 0.1);
+}
+
+.chem-card-header {
+  margin-bottom: 16px;
+}
+
+.chem-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.chem-category-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: #f0f7ff;
+  color: var(--blue-primary);
+  border: 1px solid var(--border-blue);
+  font-weight: 700;
+}
+
+.chem-cas-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.chem-title {
+  font-size: 1.32rem;
+  font-weight: 800;
+  color: var(--blue-navy);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+
+.chem-trade-name {
+  font-size: 0.88rem;
+  color: var(--blue-primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.chem-formula-box {
+  background: #f0f7ff;
+  border: 1px solid var(--border-blue);
+  padding: 5px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.84rem;
+  color: var(--blue-primary);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.chem-purpose {
+  font-size: 0.94rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.chem-specs-mini {
+  background: #f8fbfe;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 0.82rem;
+}
+
+.chem-spec-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.chem-spec-label {
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.chem-spec-val {
+  color: var(--text-main);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chem-card-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: auto;
+}
+
+/* Search & Filter Toolbar */
+.catalog-toolbar {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 34px;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input-wrapper {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.search-input-wrapper svg {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--blue-primary);
+}
+
+.search-input {
+  width: 100%;
+  padding: 13px 18px 13px 50px;
+  background: #f8fbfe;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 10px;
+  color: var(--text-main);
+  font-size: 0.98rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.search-input:focus {
+  border-color: var(--blue-primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.15);
+}
+
+.filter-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: #f8fbfe;
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  color: var(--blue-primary);
+  background: #f0f7ff;
+  border-color: var(--border-blue);
+}
+
+.filter-btn.active {
+  background: var(--blue-primary);
+  color: #ffffff;
+  border-color: var(--blue-primary);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.2);
+}
+
+/* Modals */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 37, 64, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+}
+
+.modal-box {
+  background: #ffffff;
+  border: 1px solid var(--border-blue);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 820px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0, 53, 102, 0.22);
+  transform: scale(0.95);
+  transition: transform var(--transition-normal);
+  position: relative;
+  color: var(--text-main);
+}
+
+.modal-overlay.active .modal-box {
+  transform: scale(1);
+}
+
+.modal-header {
+  padding: 26px 32px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #f8fbfe;
+}
+
+.modal-header h3 {
+  color: var(--blue-navy);
+  font-weight: 800;
+}
+
+.modal-close-btn {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  padding: 8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.modal-close-btn:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ef4444;
+  color: #ef4444;
+}
+
+.modal-body {
+  padding: 32px;
+}
+
+.tds-specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.92rem;
+}
+
+.tds-specs-table th, 
+.tds-specs-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.tds-specs-table th {
+  color: var(--blue-primary);
+  background: #f0f7ff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+.tds-specs-table td:first-child {
+  color: var(--text-secondary);
+  width: 45%;
+  font-weight: 500;
+}
+
+.tds-specs-table td:last-child {
+  color: var(--text-main);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.tds-info-box {
+  background: #f0f7ff;
+  border-left: 4px solid var(--blue-primary);
+  padding: 16px 20px;
+  border-radius: 0 10px 10px 0;
+  margin: 18px 0;
+  font-size: 0.94rem;
+  color: var(--text-main);
+}
+
+.packaging-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.packaging-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #f8fbfe;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.84rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.modal-footer {
+  padding: 20px 32px;
+  border-top: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  background: #f8fbfe;
+}
+
+/* Diagnostic Tool Widget */
+.diag-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+}
+
+.diag-symptoms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 22px 0;
+}
+
+.symptom-btn {
+  background: #f8fbfe;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 16px 14px;
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.symptom-btn:hover {
+  border-color: var(--blue-primary);
+  background: #f0f7ff;
+}
+
+.symptom-btn.active {
+  border-color: var(--blue-primary);
+  background: #e0f2fe;
+  box-shadow: 0 4px 14px rgba(0, 119, 182, 0.15);
+}
+
+.symptom-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(0, 119, 182, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-primary);
+  flex-shrink: 0;
+}
+
+.symptom-name {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--blue-navy);
+}
+
+.symptom-system {
+  font-size: 0.76rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.diag-solution-box {
+  background: #f0f7ff;
+  border: 1.5px solid var(--blue-primary);
+  border-radius: 14px;
+  padding: 26px;
+  margin-top: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  box-shadow: 0 4px 16px rgba(0, 119, 182, 0.08);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 2500;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toast {
+  background: #ffffff;
+  border: 1.5px solid var(--blue-primary);
+  border-radius: 10px;
+  padding: 14px 20px;
+  color: var(--blue-navy);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0, 53, 102, 0.15);
+  animation: slideInUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Application 01 drinking-water treatment card */
+.glass-card.drinking-water-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 32px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.82) 0%, rgba(10,37,64,0.55) 55%, rgba(10,37,64,0.28) 100%), url('../assets/images/Drinking Water treatment.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.drinking-water-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.drinking-water-card > .badge-tag {
+  align-self: flex-start;
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 119, 182, 0.9);
+  color: #fff;
+}
+
+.drinking-water-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.drinking-water-droplet {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  fill: #7fd4ee;
+}
+
+.drinking-water-description {
+  max-width: 1000px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 16.8px;
+  line-height: 1.65;
+}
+
+.drinking-water-process {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.drinking-water-process::before {
+  position: absolute;
+  top: 34px;
+  right: 12.5%;
+  left: 12.5%;
+  border-top: 1px dotted rgba(255, 255, 255, 0.65);
+  content: '';
+}
+
+.drinking-water-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.drinking-water-step-icon {
+  display: inline-flex;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(10, 37, 64, 0.55);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.drinking-water-step-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.drinking-water-step-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .drinking-water-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+
+  .drinking-water-process::before {
+    display: none;
+  }
+
+  .drinking-water-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Application 02 industrial-water treatment card */
+.glass-card.industrial-water-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 32px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Industrial water treatment.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.industrial-water-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.industrial-water-card > .badge-tag {
+  align-self: flex-start;
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 119, 182, 0.9);
+  color: #fff;
+}
+
+.glass-card.cooling-water-card {
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Cooling Water Treatment.jpg');
+}
+
+.cooling-water-card .industrial-water-detail-group > p {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.65;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.glass-card.ro-water-card {
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Reverse osmosis.png');
+}
+
+.ro-water-card .ro-water-section-intro {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.65;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.ro-water-card .ro-water-process {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ro-water-card .ro-water-process::before {
+  right: 16.67%;
+  left: 16.67%;
+}
+
+@media (max-width: 640px) {
+  .ro-water-card .ro-water-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.industrial-water-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+/* Application 04 boiler-water treatment card */
+.glass-card.boiler-water-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 32px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Boiler Water Treatment.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.boiler-water-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.boiler-water-card > .badge-tag {
+  align-self: flex-start;
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 119, 182, 0.9);
+  color: #fff;
+}
+
+.boiler-water-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.boiler-water-droplet {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  fill: #7fd4ee;
+}
+
+.boiler-water-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+}
+
+.boiler-water-description > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 16.8px;
+  line-height: 1.55;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.boiler-water-detail-group {
+  padding: 12px 16px;
+  border-left: 2px solid rgba(127, 212, 238, 0.7);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.boiler-water-description h3 {
+  position: relative;
+  margin: 0;
+  padding-left: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.boiler-water-description h3::before {
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7fd4ee;
+  content: '';
+}
+
+.boiler-water-description ul {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.boiler-water-description li {
+  position: relative;
+  padding-left: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.boiler-water-description li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  content: '';
+}
+
+.boiler-water-description strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.boiler-water-process-heading {
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boiler-water-process-steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.boiler-water-process-steps::before {
+  position: absolute;
+  top: 34px;
+  right: 12.5%;
+  left: 12.5%;
+  border-top: 1px dotted rgba(255, 255, 255, 0.65);
+  content: '';
+}
+
+.boiler-water-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.boiler-water-step-icon {
+  display: inline-flex;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(10, 37, 64, 0.55);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.boiler-water-step-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.boiler-water-step-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.boiler-water-closing {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+@media (max-width: 640px) {
+  .boiler-water-process-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+
+  .boiler-water-process-steps::before {
+    display: none;
+  }
+
+  .boiler-water-title {
+    font-size: 1.8rem;
+  }
+}
+
+.industrial-water-droplet {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  fill: #7fd4ee;
+}
+
+.industrial-water-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.industrial-water-description > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.industrial-water-detail-group {
+  padding: 12px 16px;
+  border-left: 2px solid rgba(127, 212, 238, 0.7);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.industrial-water-description h3 {
+  position: relative;
+  margin: 0;
+  padding-left: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.industrial-water-description h3::before {
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7fd4ee;
+  content: '';
+}
+
+.industrial-water-description ul {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.industrial-water-description li {
+  position: relative;
+  padding-left: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.industrial-water-description li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  content: '';
+}
+
+.industrial-water-description strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.industrial-water-process {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.industrial-water-process::before {
+  position: absolute;
+  top: 34px;
+  right: 12.5%;
+  left: 12.5%;
+  border-top: 1px dotted rgba(255, 255, 255, 0.65);
+  content: '';
+}
+
+.industrial-water-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.industrial-water-step-icon {
+  display: inline-flex;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(10, 37, 64, 0.55);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.industrial-water-step-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.industrial-water-step-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .industrial-water-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+
+  .industrial-water-process::before {
+    display: none;
+  }
+
+  .industrial-water-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Application 03 wastewater treatment card */
+.glass-card.wastewater-water-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px 32px !important;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/waste water treatment.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.wastewater-water-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.wastewater-water-card > .badge-tag {
+  align-self: flex-start;
+  margin: 0;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 119, 182, 0.9);
+  color: #fff;
+}
+
+.wastewater-water-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  color: #fff;
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.wastewater-water-droplet {
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  fill: #7fd4ee;
+}
+
+.wastewater-water-description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 1000px;
+  margin: 0;
+}
+
+.wastewater-water-description > p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 16.8px;
+  line-height: 1.65;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.75), 0 1px 3px rgba(0, 0, 0, 0.9);
+}
+
+.wastewater-water-detail-group {
+  padding: 12px 16px;
+  border-left: 2px solid rgba(127, 212, 238, 0.7);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.wastewater-water-detail-group h3 {
+  position: relative;
+  margin: 0;
+  padding-left: 14px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.wastewater-water-detail-group h3::before {
+  position: absolute;
+  top: 0.45em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7fd4ee;
+  content: '';
+}
+
+.wastewater-water-detail-group ul {
+  display: grid;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.wastewater-water-detail-group li {
+  position: relative;
+  padding-left: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.wastewater-water-detail-group li::before {
+  position: absolute;
+  top: 0.65em;
+  left: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  content: '';
+}
+
+.wastewater-water-detail-group strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.wastewater-water-process {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  padding-top: 4px;
+}
+
+.wastewater-water-process::before {
+  position: absolute;
+  top: 34px;
+  right: 12.5%;
+  left: 12.5%;
+  border-top: 1px dotted rgba(255, 255, 255, 0.65);
+  content: '';
+}
+
+.wastewater-water-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.wastewater-water-step-icon {
+  display: inline-flex;
+  width: 68px;
+  height: 68px;
+  flex: 0 0 68px;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: rgba(10, 37, 64, 0.55);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  color: #fff;
+}
+
+.wastewater-water-step-icon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.wastewater-water-step-label {
+  color: #fff;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .wastewater-water-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 12px;
+  }
+
+  .wastewater-water-process::before {
+    display: none;
+  }
+
+  .wastewater-water-title {
+    font-size: 1.8rem;
+  }
+}
+
+  /* Home page Industrial Solutions photo cards */
+  #solutions .solutions-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+  }
+
+  #solutions .solutions-photo-card {
+    position: relative;
+    display: flex;
+    min-width: 0;
+    min-height: 600px;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    isolation: isolate;
+    border-radius: 22px;
+    box-shadow: 0 14px 34px rgba(10, 37, 64, 0.22);
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+
+  #solutions .solutions-photo-card::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/Industrial water treatment.jpg') center / cover;
+    content: '';
+    transition: transform 0.7s ease;
+  }
+
+  #solutions .solutions-photo-card--boiler::before {
+    background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/Boiler Water Treatment.jpg');
+  }
+
+  #solutions .solutions-photo-card--cooling::before {
+    background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/Cooling Water Treatment.jpg');
+  }
+
+  #solutions .solutions-photo-card:hover,
+  #solutions .solutions-photo-card:focus-visible {
+    box-shadow: 0 24px 46px rgba(10, 37, 64, 0.32);
+    transform: translateY(-8px);
+  }
+
+  #solutions .solutions-photo-card:hover::before,
+  #solutions .solutions-photo-card:focus-visible::before {
+    transform: scale(1.08);
+  }
+
+  #solutions .solutions-photo-card:focus-visible {
+    outline: 3px solid #7fd4ee;
+    outline-offset: 4px;
+  }
+
+  #solutions .solutions-photo-icon {
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    flex: 0 0 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    color: #fff;
+    backdrop-filter: blur(8px);
+  }
+
+  #solutions .solutions-photo-icon svg {
+    width: 25px;
+    height: 25px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  #solutions .solutions-glass-panel {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 14px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 18px;
+    background: rgba(10, 37, 64, 0.66);
+    backdrop-filter: blur(14px);
+  }
+
+  #solutions .solutions-photo-card--cooling .solutions-glass-panel {
+    min-height: 496px;
+  }
+
+  #solutions .solutions-glass-panel h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+
+  #solutions .solutions-glass-panel > p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  #solutions .solutions-glass-panel h4 {
+    position: relative;
+    margin: 2px 0 0;
+    padding-left: 14px;
+    color: #bfe9f7;
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  #solutions .solutions-glass-panel h4::before {
+    position: absolute;
+    top: 0.45em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7fd4ee;
+    content: '';
+  }
+
+  #solutions .solutions-keyword-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #solutions .solutions-keyword-row {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  #solutions .solutions-keyword-icon {
+    display: inline-flex;
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(127, 212, 238, 0.18);
+    color: #7fd4ee;
+  }
+
+  #solutions .solutions-keyword-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  #solutions .solutions-keyword-copy {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  #solutions .solutions-keyword-copy strong {
+    color: #fff;
+    font-size: 13.5px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  #solutions .solutions-keyword-copy > span {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    line-height: 1.3;
+  }
+
+  #solutions .solutions-card-cta {
+    display: flex;
+    min-height: 54px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 2px;
+    padding: 8px 8px 8px 20px;
+    border-radius: 40px;
+    background: #fff;
+    color: #0a2540;
+    font-size: 15px;
+    font-weight: 800;
+    transition: background 0.25s ease;
+  }
+
+  #solutions .solutions-photo-card:hover .solutions-card-cta,
+  #solutions .solutions-photo-card:focus-visible .solutions-card-cta {
+    background: #7fd4ee;
+  }
+
+  #solutions .solutions-card-arrow {
+    display: inline-flex;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0077b6, #0a3a6b);
+    color: #fff;
+    font-size: 22px;
+    line-height: 1;
+    animation: solutionsArrowPulse 2s infinite;
+  }
+
+  #solutions .solutions-photo-browse {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  @keyframes solutionsArrowPulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 119, 182, 0.5); }
+    70%, 100% { box-shadow: 0 0 0 12px rgba(0, 119, 182, 0); }
+  }
+
+  @media (max-width: 1050px) {
+    #solutions .solutions-photo-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1051px) {
+    #solutions .solutions-photo-card--industrial .solutions-keyword-row {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 359px) {
+    #products .product-catalog-grid {
+      grid-template-columns: minmax(0, 1fr) !important;
+    }
+  }
+
+  @media (max-width: 640px) {
+    #solutions .solutions-photo-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #solutions .solutions-photo-card--cooling .solutions-glass-panel {
+      min-height: 559px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #solutions .solutions-card-arrow {
+      animation: none;
+    }
+  }

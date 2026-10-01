@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aqua Care | The Water Treatment Company</title>
+  <meta name="description"
+    content="Aqua Care is a Bangladesh-based water treatment company established in 2012, providing industrial water treatment chemicals and related solutions to industrial clients.">
+  <meta name="keywords"
+    content="Aqua Care, The Water Treatment Company, Aqua Care Trading, Bangladesh water treatment, industrial chemical supply, water treatment chemicals, industrial water treatment solutions">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+  <!-- Background Watermark (Aqua Care logo) -->
+  <div class="bg-watermark" aria-hidden="true"></div>
+
+  <div data-site-header></div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section section-hero water-bg" id="home">
+      <canvas class="water-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;"
+          class="hero-flex-grid">
+          <div>
+            <!-- Entrance #1: badge fades up on load -->
+            <div class="badge-tag fade-in-up" style="animation-delay: 0.1s;">
+              <span class="pulse-dot"></span>
+              Established 2012 • Bangladesh
+            </div>
+            <!-- Entrance #2: h1 fades up on load -->
+            <h1 class="section-title fade-in-up" style="font-size: 3.1rem; margin-bottom: 20px; animation-delay: 0.2s;">
+              Reliable Industrial Water Treatment Company
+            </h1>
+            <!-- Entrance #3: paragraph fades up on load -->
+            <p class="section-desc fade-in-up" style="font-size: 1.15rem; margin-bottom: 32px; animation-delay: 0.3s;">
+              Serving Bangladesh's industrial water treatment and chemical supply needs with professional solutions
+              since 2012.
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
+              <!-- Animation #3: ripple-btn enables the JS ripple effect on click -->
+              <!-- Animation #3: ripple-btn + Entrance #4: button fades up on load -->
+              <a href="applications.html" class="btn btn-primary btn-lg ripple-btn fade-in-up"
+                style="animation-delay: 0.4s;">
+                Explore Our Solutions
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual + Entrance #6: image card slides in from left -->
+          <div class="hero-img-col slide-in-left" style="animation-delay: 0.3s;">
+            <div class="hero-visual"
+              style="position: relative; border-radius: 24px; overflow: hidden; border: 1px solid var(--border-blue); box-shadow: var(--shadow-blue);">
+              <!-- Animation #1: ken-burns-img triggers the slow 18s Ken Burns zoom keyframe -->
+              <img class="hero-visual-image ken-burns-img" src="assets/images/hero.jpg"
+                alt="Aqua Care Industrial Water Treatment Plant"
+                style="width: 100%; height: 420px; object-fit: cover; display: block;">
+              <div class="hero-visual-caption"
+                style="position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(180deg, transparent 0%, rgba(10, 37, 64, 0.92) 90%); color: #ffffff;">
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <div>
+                    <div class="hero-visual-eyebrow"
+                      style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--aqua-light); font-weight: 700;">
+                      Aqua Care</div>
+                    <div class="hero-visual-title" style="font-size: 1.1rem; font-weight: 800;">The Water Treatment
+                      Company</div>
+                  </div>
+                  <a href="chemicals.html" class="btn btn-primary btn-sm hero-visual-cta"
+                    style="padding: 8px 16px;">View Products</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT COMPANY SECTION -->
+    <section class="section about-company-section" id="about">
+      <div class="about-company-container">
+        <div class="about-company-header">
+          <div class="badge-tag">About Company</div>
+        </div>
+        <div class="about-company-grid">
+          <div class="about-company-copy">
+            <div class="about-company-text-block">
+              <h1>Aqua Care</h1>
+              <p class="about-company-tagline">The Water Treatment Company</p>
+              <p class="about-intro-lead">Established in 2012, <strong>Aqua Care</strong> is a leading provider of industrial water treatment chemicals and solutions in Bangladesh. Over the years, we have grown into a trusted technical partner for manufacturing plants, power facilities, and large-scale industrial operations across the country.</p>
+            </div>
+            <p class="about-intro-secondary">We specialize in Cooling Water, Boiler Water, Industrial Water, Waste Water, Drinking Water, and Reverse Osmosis (RO) Water Treatment, supported by high performance chemicals, specialized additives, and customized treatment programs.</p>
+          </div>
+
+          <div class="about-company-photo">
+            <img src="assets/images/lab.jpg" alt="Aqua Care Water Treatment Laboratory">
+            <span class="about-company-photo-sheen" aria-hidden="true"></span>
+            <div class="about-company-photo-badge">
+                Aqua Care • Est. 2012
+            </div>
+          </div>
+        </div>
+
+        <div class="about-intro-callout">
+          <i class="bub" style="--b-left: 38%; --b-size: 14px; --b-duration: 9s; --b-delay: 0s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 48%; --b-size: 24px; --b-duration: 12s; --b-delay: 3s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 58%; --b-size: 10px; --b-duration: 8s; --b-delay: 1s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 66%; --b-size: 18px; --b-duration: 11s; --b-delay: 5s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 74%; --b-size: 28px; --b-duration: 13s; --b-delay: 2s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 82%; --b-size: 12px; --b-duration: 9s; --b-delay: 6s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 90%; --b-size: 20px; --b-duration: 12s; --b-delay: 4s;" aria-hidden="true"></i>
+          <i class="bub" style="--b-left: 30%; --b-size: 10px; --b-duration: 10s; --b-delay: 7s;" aria-hidden="true"></i>
+          <div class="about-intro-callout-icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 3h6M13 3v7l-5.1 9.1A3.25 3.25 0 0 0 10.73 24h6.54a3.25 3.25 0 0 0 2.83-4.9L15 10V3M10.4 17h7.2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>Our experienced team of chemists works directly with industries, providing on-site water analysis, system monitoring, chemical dosing and technical support. By combining quality products with expert field service, we deliver reliable, tailored solutions that improve operational efficiency, protect critical equipment, and maintain consistent water quality.</p>
+        </div>
+
+        <div class="core-business-heading">Our Core Business Areas</div>
+            <div class="core-business-grid">
+              <div class="core-business-card">
+                <img src="assets/images/hero.jpg" alt="Industrial raw water clarification">
+                <div class="core-business-card-copy">
+                  <strong>Raw Water Clarification</strong>
+                  <span>Coagulation and flocculation for clear process water.</span>
+                </div>
+              </div>
+              <div class="core-business-card">
+                <img src="https://images.pexels.com/photos/10040001/pexels-photo-10040001.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Industrial boiler and steam system">
+                <div class="core-business-card-copy">
+                  <strong>Boiler Water</strong>
+                  <span>Protecting boilers from corrosion and scale.</span>
+                </div>
+              </div>
+              <div class="core-business-card">
+                <img src="https://images.pexels.com/photos/29155807/pexels-photo-29155807.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Industrial cooling tower system">
+                <div class="core-business-card-copy">
+                  <strong>Cooling Water</strong>
+                  <span>Efficient heat transfer with dependable control.</span>
+                </div>
+              </div>
+              <div class="core-business-card">
+                <img src="https://images.pexels.com/photos/31257317/pexels-photo-31257317.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Water treatment laboratory analysis">
+                <div class="core-business-card-copy">
+                  <strong>Ion Exchange</strong>
+                  <span>High-purity water for demanding operations.</span>
+                </div>
+              </div>
+              <div class="core-business-card">
+                <img src="assets/images/reverse-osmosis.jpg" alt="Industrial reverse osmosis water treatment system">
+                <div class="core-business-card-copy">
+                  <strong>Reverse Osmosis</strong>
+                  <span>Consistent membrane performance and water quality.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS & CHEMICALS SECTION -->
+    <section class="section" id="products"
+      style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">Product Catalog</div>
+          <h2 class="section-title">Industrial Water Treatment Chemicals</h2>
+          <p class="section-desc">Supplying high-performance water treatment chemicals for boiler systems, cooling
+            towers, reverse osmosis, and effluent treatment plants across Bangladesh.</p>
+        </div>
+
+        <div class="product-catalog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 28px;">
+          <!-- Product Card 1 -->
+          <div class="glass-card product-photo-card product-photo-card--boiler">
+            <div
+              style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); text-transform: uppercase; margin-bottom: 8px;">
+              BOILER WATER</div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 10px;">Boiler Water Treatment Chemicals</h3>
+            <p style="font-size: 0.94rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Scale inhibitors and corrosion protectors that keep boiler tubes and steam systems clean and efficient.
+            </p>
+            <a href="chemicals.html?cat=boiler" class="btn btn-secondary btn-sm">View Product Details →</a>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="glass-card product-photo-card product-photo-card--cooling">
+            <div
+              style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); text-transform: uppercase; margin-bottom: 8px;">
+              COOLING WATER</div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 10px;">Cooling Tower Water Treatment</h3>
+            <p style="font-size: 0.94rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Corrosion inhibitors and scale control agents that protect cooling towers and heat exchangers.
+            </p>
+            <a href="chemicals.html?cat=cooling" class="btn btn-secondary btn-sm">View Product Details →</a>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="glass-card product-photo-card product-photo-card--ro">
+            <div
+              style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); text-transform: uppercase; margin-bottom: 8px;">
+              REVERSE OSMOSIS (RO)</div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 10px;">RO Water Treatment</h3>
+            <p style="font-size: 0.94rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Antiscalants and cleaners that prevent membrane fouling and extend RO system life.
+            </p>
+            <a href="chemicals.html?cat=ro" class="btn btn-secondary btn-sm">View Product Details →</a>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+          <a href="chemicals.html" class="btn btn-primary btn-lg">Browse Full Chemical Catalog</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUTIONS SECTION -->
+    <section class="section solutions-photo-section" id="solutions">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">Industrial Solutions</div>
+          <h2 class="section-title">Industrial Water Treatment Solutions</h2>
+          <p class="section-desc">Tailored technical solutions designed for industrial utilities, manufacturing plants,
+            and effluent treatment facilities.</p>
+        </div>
+
+        <div class="solutions-photo-grid">
+          <a class="solutions-photo-card solutions-photo-card--industrial" href="applications.html#industrial-water">
+            <span class="solutions-photo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 21V9l6 3V8l6 4V5h4v16M2 21h20M6 16h2m3 0h2m3 0h2m-10 5v-3h4v3"/></svg></span>
+            <div class="solutions-glass-panel">
+              <h3>Industrial Water Treatment</h3>
+              <p>Purifies raw water and cleans facility wastewater to protect machinery and meet regulations.</p>
+              <h4>How We Treat Your Water</h4>
+              <div class="solutions-keyword-list">
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16l-6 7v7l-4 2v-9L4 4Z"/><path d="M8 8h8m-6 3h4"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Physical &amp; Mechanical</strong><span>Removes debris, grit and suspended particles</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2"/><circle cx="17" cy="6" r="1.5"/><circle cx="15" cy="17" r="2"/><circle cx="6" cy="17" r="1.5"/><path d="m8 8 7-2m-8 3 6 6m-5 2 5 0m3-2 1-7"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Chemical Treatment</strong><span>Groups fine particles and balances water chemistry</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 4c4 0 7 3 7 7s-3 9-7 9-7-5-7-9 3-7 7-7Z"/><path d="M9 10c1-2 3-1 3 0s-1 2-2 3 0 2 1 2m4-6 2 1m-9 3-2 1m9 2-2-1m-3-7V6"/><circle cx="9" cy="12" r=".7"/><circle cx="15" cy="14" r=".7"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Biological Treatment</strong><span>Breaks down organic matter, nitrogen and phosphorus</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M4 9h16M4 14h16M9 4v16m5-16v16"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Advanced Separation</strong><span>RO and ion exchange remove salts and heavy metals</span></span>
+                </div>
+              </div>
+              <span class="solutions-card-cta">Explore Solution<span class="solutions-card-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="solutions-photo-card solutions-photo-card--boiler" href="applications.html#boiler-water">
+            <span class="solutions-photo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-2-1-4-3-6 0 3-1 4-2 4 1-5-2-9-5-11 1 5-4 8-4 13 0 4 3 7 7 7Z"/><path d="M10 18c0-2 2-3 3-5 2 2 3 3 3 5a4 4 0 0 1-6 0Z"/></svg></span>
+            <div class="solutions-glass-panel">
+              <h3>Boiler Water Treatment</h3>
+              <p>Chemicals added directly into the boiler to prevent scale and corrosion and condition sludge.</p>
+              <h4>Problems We Solve</h4>
+              <div class="solutions-keyword-list">
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 18 5-8 4 4 4-8 5 12H3Z"/><path d="M5 21h14M8 16l4 2 4-7"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Prevent Scale</strong><span>Stops mineral deposits on hot boiler tubes</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 6-7"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Stop Corrosion</strong><span>Removes leftover oxygen and balances alkalinity</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="7" cy="15" r="2.5"/><circle cx="13" cy="8" r="3"/><circle cx="18" cy="15" r="2"/><circle cx="10" cy="19" r="1"/><path d="M4 22h16"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Control Foaming</strong><span>Stops water carryover into the steam lines</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v15H4zM4 14h16M4 17h16"/><circle cx="8" cy="9" r=".8"/><circle cx="13" cy="11" r=".8"/><circle cx="17" cy="8" r=".8"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Manage Sludge</strong><span>Keeps solids loose so they can be flushed out</span></span>
+                </div>
+              </div>
+              <span class="solutions-card-cta">Explore Solution<span class="solutions-card-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+
+          <a class="solutions-photo-card solutions-photo-card--cooling" href="applications.html#cooling-water">
+            <span class="solutions-photo-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><path d="M12 10c-2-2-4-6-2-7 3-1 5 3 4 7m-1 4c2 2 4 6 2 7-3 1-5-3-4-7m-1-2c-3 1-7 1-7-2s4-4 8-2m2 4c3-1 7-1 7 2s-4 4-8 2"/></svg></span>
+            <div class="solutions-glass-panel">
+              <h3>Cooling Water Treatment</h3>
+              <p>Manages water quality in cooling systems to prevent scaling, corrosion, fouling and biological growth.</p>
+              <h4>How We Protect Your System</h4>
+              <div class="solutions-keyword-list">
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-4 8-9 10-5-2-9-5-9-10V6l9-4Z"/><path d="m8 12 3 3 6-7"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Scale Inhibitors</strong><span>Stop minerals sticking to heat exchangers</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16M6 9h12m-10 4h8m-6 4h4M3 21h18"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Corrosion Inhibitors</strong><span>Form a protective shield on metal pipes</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="6"/><path d="M12 3v3m0 12v3M3 12h3m12 0h3M6 6l2 2m8 8 2 2m0-12-2 2m-8 8-2 2M5 19 19 5"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>Biocides</strong><span>Kill bacteria, algae and fungi</span></span>
+                </div>
+                <div class="solutions-keyword-row">
+                  <span class="solutions-keyword-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M7 16h10m-8-3h6"/></svg></span>
+                  <span class="solutions-keyword-copy"><strong>pH Control</strong><span>Keeps water in a safe, non-corrosive range</span></span>
+                </div>
+              </div>
+              <span class="solutions-card-cta">Explore Solution<span class="solutions-card-arrow" aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </div>
+        <div class="solutions-photo-browse">
+          <a href="applications.html" class="btn btn-primary btn-lg">Browse Full Solutions →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES SECTION -->
+    <section class="section" id="industries"
+      style="background: #EEF6FC; border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">Sectors We Serve</div>
+          <h2 class="section-title">Industries We Supply</h2>
+          <p class="section-desc">Providing specialized water treatment solutions to key industrial sectors across
+            Bangladesh.</p>
+        </div>
+
+        <div class="industry-stats" data-industry-stats aria-label="Industry service statistics">
+          <div class="industry-stat">
+            <strong class="industry-stat-number" data-count-target="100">100+</strong>
+            <span>Industries served</span>
+          </div>
+          <div class="industry-stat">
+            <strong class="industry-stat-number" data-count-target="14">14+</strong>
+            <span>Years of service</span>
+          </div>
+          <div class="industry-stat">
+            <strong class="industry-stat-number" data-count-target="24" data-count-suffix="/7">24<span aria-hidden="true">/7</span></strong>
+            <span>Technical support</span>
+          </div>
+        </div>
+
+        <div class="industry-grid" aria-label="Industries served">
+          <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #F97316;">
+            <div class="industry-photo-wrap">
+              <img class="industry-photo" src="assets/steel-mill.jpg" alt="Steel mill facility" loading="lazy">
+            </div>
+            <div class="industry-icon" aria-hidden="true">🏭</div>
+            <div class="industry-card-body">
+              <h4 class="industry-title">Steel Mill</h4>
+              <p class="industry-description">Boiler feedwater treatment, cooling water chemistry optimization, and corrosion protection for steel production systems.</p>
+            </div>
+          </div>
+
+          <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #8B5CF6;">
+            <div class="industry-photo-wrap">
+              <img class="industry-photo" src="assets/images/client-textile.jpg" alt="Textile and garments factory" loading="lazy">
+            </div>
+            <div class="industry-icon" aria-hidden="true">🧵</div>
+            <div class="industry-card-body">
+              <h4 class="industry-title">Textiles &amp; Garments</h4>
+              <p class="industry-description">ETP decolorization, process water clarification, and boiler chemical supply.</p>
+            </div>
+          </div>
+
+          <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #EC4899;">
+            <div class="industry-photo-wrap">
+              <img class="industry-photo" src="assets/images/client-pharma.jpg" alt="Pharmaceutical manufacturing facility" loading="lazy">
+            </div>
+            <div class="industry-icon" aria-hidden="true">💊</div>
+            <div class="industry-card-body">
+              <h4 class="industry-title">Pharmaceuticals</h4>
+              <p class="industry-description">High-purity RO antiscalants, pure water treatment, and biocide control.</p>
+            </div>
+          </div>
+
+          <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #16A34A;">
+            <div class="industry-photo-wrap">
+              <img class="industry-photo" src="assets/images/client-food-processing.jpg" alt="Food and beverage processing plant" loading="lazy">
+            </div>
+            <div class="industry-icon" aria-hidden="true">🍽️</div>
+            <div class="industry-card-body">
+              <h4 class="industry-title">Food &amp; Beverage</h4>
+              <p class="industry-description">Boiler water treatment, chiller conditioning, and process clarification.</p>
+            </div>
+          </div>
+
+          <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #D97706;">
+            <div class="industry-photo-wrap">
+              <img class="industry-photo" src="assets/images/cooling-plant.jpg" alt="Power and utilities plant" loading="lazy">
+            </div>
+            <div class="industry-icon" aria-hidden="true">⚡</div>
+            <div class="industry-card-body">
+              <h4 class="industry-title">Power &amp; Utilities</h4>
+              <p class="industry-description">Cooling tower biocide shock regimens, boiler oxygen scavengers, and demineralization support.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">Recent Case Implementations</div>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-desc">Sample technical projects delivered for industrial clients across Bangladesh.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;" class="diag-symptoms-grid">
+          <div class="glass-card">
+            <div
+              style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); text-transform: uppercase; margin-bottom: 6px;">
+              Industrial ETP Solution</div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 10px;">Textile
+              Effluent Decolorization & Dewatering</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">Optimized Poly Aluminium Chloride and
+              Polyacrylamide polymer dosing for rapid sludge dewatering and COD reduction.</p>
+          </div>
+
+          <div class="glass-card">
+            <div
+              style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); text-transform: uppercase; margin-bottom: 6px;">
+              Power Utility Project</div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 10px;">Cooling Tower
+              Bio-Film Prevention</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">Implemented non-oxidizing biocide and
+              biodispersant treatment to maintain high heat-exchange efficiency.</p>
+          </div>
+
+          <div class="glass-card">
+            <div
+              style="font-size: 0.8rem; font-weight: 700; color: var(--blue-primary); text-transform: uppercase; margin-bottom: 6px;">
+              Pharma Plant Solution</div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 10px;">Reverse
+              Osmosis Membrane Protection</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">Supplied high-silica antiscalant chemistry to
+              double RO membrane cleaning intervals and reduce scaling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR TEAM SECTION -->
+    <section class="section" id="team"
+      style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag">Technical Experts</div>
+          <h2 class="section-title">Our Team</h2>
+          <p class="section-desc">Dedicated water treatment professionals and chemical specialists providing expert
+            consultations.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;" class="diag-symptoms-grid">
+          <div class="glass-card" style="text-align: center; padding: 32px 24px;">
+            <div
+              style="width: 72px; height: 72px; border-radius: 50%; background: var(--border-blue); color: var(--blue-navy); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 16px;">
+              aC
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 4px;">Water
+              Treatment Specialists</h3>
+            <p style="font-size: 0.88rem; color: var(--blue-primary); font-weight: 600; margin-bottom: 12px;">Field
+              Chemical Engineering Desk</p>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Providing raw water analysis, dosing rate
+              optimization, and jar testing support.</p>
+          </div>
+
+          <div class="glass-card" style="text-align: center; padding: 32px 24px;">
+            <div
+              style="width: 72px; height: 72px; border-radius: 50%; background: var(--border-blue); color: var(--blue-navy); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 16px;">
+              aC
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 4px;">Industrial
+              Chemical Advisors</h3>
+            <p style="font-size: 0.88rem; color: var(--blue-primary); font-weight: 600; margin-bottom: 12px;">Client
+              Technical Desk</p>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Assisting industrial plants with chemical
+              selection and safety handling guidelines.</p>
+          </div>
+
+          <div class="glass-card" style="text-align: center; padding: 32px 24px;">
+            <div
+              style="width: 72px; height: 72px; border-radius: 50%; background: var(--border-blue); color: var(--blue-navy); display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.4rem; margin: 0 auto 16px;">
+              aC
+            </div>
+            <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--blue-navy); margin-bottom: 4px;">Logistics &
+              Operations Support</h3>
+            <p style="font-size: 0.88rem; color: var(--blue-primary); font-weight: 600; margin-bottom: 12px;">Supply
+              Desk</p>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">Ensuring prompt delivery and packaging
+              management across industrial zones.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEDICATED CONTACT SECTION -->
+    <section class="section" id="contact"
+      style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;" class="calc-grid">
+          <div>
+            <div class="badge-tag">Official Contact Information</div>
+            <img src="assets/logo.png" alt="Aqua Care Logo" class="h-10 w-auto mb-2" style="display: block; margin-bottom: 24px; max-height: 64px; width: auto;">
+
+            <div class="bg-white border rounded-xl shadow-sm p-6" style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 12px; box-shadow: var(--shadow-sm); padding: 20px; margin: 0;">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start" style="display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.5rem; align-items:start;">
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  <div>
+                    <div style="font-weight: 800; color: var(--blue-navy); font-size: 1.1rem; margin-bottom: 6px;">Business /
+                      Legal Entity:</div>
+                    <div style="font-size: 1.05rem; font-weight: 700; color: var(--blue-primary);">Aqua Care Trading</div>
+                  </div>
+
+                  <div>
+                    <div style="font-weight: 700; color: var(--blue-navy); margin-bottom: 4px;">Office Address:</div>
+                    <p style="color: var(--text-main); font-size: 0.98rem; line-height: 1.6; margin: 0;">
+                      Sapnadanga R/A,<br>
+                      Bhaban #04, Flat #5C,<br>
+                      West Dhanmondi, Hajaribag,<br>
+                      Dhaka-1209, Bangladesh
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 0.75rem;">
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; white-space: nowrap;">
+                    <div style="font-weight: 700; color: var(--blue-navy); font-size: 0.9rem;">Phone & Fax:</div>
+                    <div style="color: var(--blue-primary); font-weight: 700; font-size: 1.05rem;">+88-02-9672552</div>
+                  </div>
+
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; white-space: nowrap;">
+                    <div style="font-weight: 700; color: var(--blue-navy); font-size: 0.9rem;">Cell / Mobile:</div>
+                    <div style="color: var(--text-main); font-weight: 700; font-size: 0.98rem;">01911-350427 / 01793-591851</div>
+                  </div>
+
+                  <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; white-space: nowrap;">
+                    <div style="font-weight: 700; color: var(--blue-navy); font-size: 0.9rem;">Email:</div>
+                    <a href="mailto:aquacaretrading67@gmail.com"
+                      style="color: var(--text-main); font-weight: 700; font-size: 0.98rem; text-decoration: none; transition: color 0.3s; display: inline-block; word-break: break-all;">aquacaretrading67@gmail.com</a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- OFFICIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container container-wide">
+      <div class="footer-top-grid">
+        <!-- Brand identity block -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 12px; display: inline-block;">
+            <img src="assets/logo.png" alt="Aqua Care - The Water Treatment Company" class="footer-logo-img">
+          </a>
+          <div style="font-weight: 800; color: var(--blue-navy); font-size: 1rem; margin-bottom: 4px;">Aqua Care Trading
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: 14px;">
+            Sapnadanga R/A, Bhaban #04, Flat #5C<br>
+            West Dhanmondi, Hajaribag<br>
+            Dhaka-1209, Bangladesh
+          </p>
+          <div style="font-size: 0.88rem; color: var(--text-secondary);">
+            <div><strong>Phone & Fax:</strong> +88-02-9672552</div>
+            <div><strong>Cell:</strong> 01911-350427 / 01793-591851</div>
+          </div>
+        </div>
+
+        <!-- Footer Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="chemicals.html">Products</a></li>
+            <li><a href="applications.html">Solutions</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Business Focus -->
+        <div>
+          <h4 class="footer-col-title">Our Business</h4>
+          <ul class="footer-links">
+            <li><a href="applications.html">Raw Water Clarification</a></li>
+            <li><a href="applications.html">Boiler Water</a></li>
+            <li><a href="applications.html">Cooling Water</a></li>
+            <li><a href="applications.html">Ion Exchange</a></li>
+            <li><a href="applications.html">Reverse Osmosis</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Summary -->
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Sapnadanga R/A, Bhaban #04, Flat #5C, West Dhanmondi, Hajaribag, Dhaka-1209, Bangladesh</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+              <span>+88-02-9672552</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 18h.01M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"></path>
+              </svg>
+              <span>01911-350427 / 01793-591851</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <a href="mailto:aquacaretrading67@gmail.com"
+                style="color: inherit; text-decoration: none; transition: color 0.3s;">aquacaretrading67@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-bottom">
+        <div>© Aqua Care — The Water Treatment Company</div>
+        <div>© <span id="currentYear">2026</span> Aqua Care. All Rights Reserved. <a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Technical Data Sheet (TDS) Modal -->
+  <div class="modal-overlay" id="tdsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="badge-tag" id="tdsCategory" style="margin-bottom: 6px;">Category</div>
+          <h3 id="tdsModalTitle" style="font-size: 1.5rem; font-weight: 800; color: var(--blue-navy);">Chemical Title
+          </h3>
+          <div id="tdsTradeName" style="color: var(--blue-primary); font-weight: 600; font-size: 0.95rem;">Trade Name
+          </div>
+        </div>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+          <div class="chem-formula-box" id="tdsFormula" style="margin-bottom: 0;">Formula</div>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);" id="tdsCas">CAS No:
+          </div>
+        </div>
+
+        <div class="tds-info-box">
+          <strong style="color: var(--blue-navy); display: block; margin-bottom: 4px;">Primary Purpose:</strong>
+          <span id="tdsPurpose" style="color: var(--text-secondary);"></span>
+        </div>
+
+        <div style="margin: 20px 0;">
+          <h4
+            style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--blue-primary); margin-bottom: 10px;">
+            Technical Specifications
+          </h4>
+          <table class="tds-specs-table">
+            <thead>
+              <tr>
+                <th>Parameter</th>
+                <th>Specification</th>
+              </tr>
+            </thead>
+            <tbody id="tdsSpecsTableBody">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/water-ripple.js"></script>
+  <script src="js/data.js"></script>
+  <script type="module" src="js/fuse-loader.js"></script>
+  <script src="js/app.js"></script>
+
+  <!-- Local script keeps inline JavaScript disabled by the security policy. -->
+  <script src="js/hero-ripple.js"></script>
+  <script src="/js/contact-widget.js"></script>
+</body>
+
+</html>

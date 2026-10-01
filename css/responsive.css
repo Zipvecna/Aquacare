@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Aqua Care Trading - Responsive Stylesheet (Dark Theme)
+   ========================================================================== */
+
+/* Mobile Drawer Styles */
+html,
+body {
+  overflow-x: hidden;
+}
+
+.mobile-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(3, 7, 14, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1500;
+  display: none;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.mobile-drawer-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 310px;
+  height: 100vh;
+  background: #ffffff;
+  border-left: 1px solid var(--border-subtle);
+  z-index: 1600;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: right var(--transition-normal);
+  box-shadow: -10px 0 30px rgba(0, 53, 102, 0.15);
+  overflow-y: auto;
+}
+
+.mobile-drawer.active {
+  right: 0;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.drawer-logo-img {
+  height: 72px;
+  width: auto;
+  max-width: 210px;
+  object-fit: contain;
+}
+
+.drawer-close-btn {
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  color: var(--blue-navy);
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drawer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.drawer-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.drawer-link.active, .drawer-link:hover {
+  background: var(--bg-surface-alt);
+  color: var(--blue-primary);
+  border-left: 3px solid var(--blue-primary);
+}
+
+.drawer-contact {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+/* Breakpoint: Desktop / Laptop (< 1200px) */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1024px;
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+  .metrics-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .metric-item:nth-child(3) {
+    border-right: none;
+  }
+}
+
+/* Breakpoint: Tablet (< 992px) */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+  }
+  .nav-search {
+    width: 38px;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width var(--transition-normal), box-shadow var(--transition-fast);
+  }
+  .nav-search.is-open {
+    position: absolute;
+    right: 42px;
+    width: 220px !important;
+    max-width: calc(100vw - 120px);
+    z-index: 2;
+  }
+  .nav-search-results {
+    top: calc(100% + 8px);
+    right: 0;
+    width: min(300px, calc(100vw - 40px));
+  }
+  .nav-search-input {
+    opacity: 0;
+    padding-right: 10px;
+    transition: opacity var(--transition-fast);
+  }
+  .nav-search.is-open .nav-search-input {
+    opacity: 1;
+  }
+  .mobile-toggle-btn {
+    display: block;
+  }
+  .section-hero {
+    padding-top: 108px;
+    padding-bottom: 50px;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+  .diag-symptoms-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-flex-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .hero-img-col {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
+
+/* Breakpoint: Mobile (< 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding: 44px 0;
+  }
+  .section-title,
+  h1.section-title {
+    font-size: 1.9rem !important;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  .section-desc {
+    font-size: 0.96rem;
+    line-height: 1.55;
+  }
+  .section-header {
+    margin-bottom: 28px;
+  }
+  .section-hero {
+    padding-top: 88px;
+    padding-bottom: 36px;
+  }
+  .water-bg {
+    padding-top: 76px !important;
+  }
+  main h2 {
+    font-size: 1.55rem !important;
+    line-height: 1.25;
+    letter-spacing: 0;
+  }
+  main h2.section-title {
+    font-size: 1.55rem !important;
+  }
+  main h3 {
+    font-size: 1.12rem !important;
+    line-height: 1.3;
+    letter-spacing: 0;
+  }
+  main h4 {
+    font-size: 1rem !important;
+    line-height: 1.35;
+  }
+  .step-header {
+    display: block;
+  }
+  .step-header > * {
+    display: block;
+    margin-bottom: 4px;
+  }
+  .step-desc,
+  main li,
+  main p {
+    overflow-wrap: anywhere;
+  }
+  .hero-visual-image {
+    height: 280px !important;
+  }
+  .hero-visual-caption {
+    padding: 16px !important;
+  }
+  .glass-card {
+    padding: 20px !important;
+  }
+  .btn {
+    white-space: normal;
+    text-align: center;
+  }
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .metric-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .footer-top-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .footer-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    justify-content: stretch;
+    gap: 12px;
+    padding-top: 18px;
+    text-align: left;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  .footer-bottom > div {
+    min-width: 0;
+  }
+  .footer-bottom > div:last-child {
+    text-align: right;
+  }
+  .chemical-grid, .industry-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-layout {
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
+  }
+  .core-business-grid {
+    grid-template-columns: 1fr;
+  }
+  .diag-symptoms-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .calc-grid > *,
+  .about-layout > * {
+    min-width: 0;
+  }
+  main .calc-grid {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+  }
+  main .calc-grid img {
+    height: 220px !important;
+  }
+  main .calc-grid [style*="justify-content: space-between"] {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  [style*="white-space: nowrap"] {
+    white-space: normal !important;
+  }
+  .drawer-contact,
+  .footer-contact-info,
+  .footer-contact-info li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  .modal-header, .modal-body, .modal-footer {
+    padding: 20px;
+  }
+  .tds-specs-table th, .tds-specs-table td {
+    padding: 8px 10px;
+    font-size: 0.84rem;
+  }
+  .site-logo-img {
+    height: 65px;
+    max-width: 190px;
+  }
+  .nav-wrapper {
+    height: 72px;
+  }
+  .btn-header-cta {
+    display: none;
+  }
+  .floating-hotline {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 16px;
+    font-size: 0.88rem;
+  }
+}
+
+/* Small Mobile (< 480px) */
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .filter-pills {
+    justify-content: center;
+    row-gap: 8px;
+  }
+  .filter-btn {
+    padding: 7px 10px;
+    font-size: 0.78rem;
+  }
+  .chem-card-actions {
+    grid-template-columns: 1fr;
+  }
+}

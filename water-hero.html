@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Water Hero</title>
+  <style>
+    :root {
+      --water-light: #eaf6fb;
+      --water-mid: #cfeaf5;
+      --water-dark: #a8d8ea;
+      --water-ink: #073b5c;
+      --water-accent: #087ea4;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--water-ink);
+      background: var(--water-light);
+    }
+
+    .water-hero {
+      isolation: isolate;
+      position: relative;
+      min-height: min(760px, 100vh);
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: clamp(2rem, 7vw, 6rem);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(255, 255, 255, .92), transparent 42%),
+        linear-gradient(135deg, var(--water-light) 0%, var(--water-mid) 52%, var(--water-dark) 100%);
+    }
+
+    .water-canvas {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      mix-blend-mode: multiply;
+    }
+
+    .water-hero::before,
+    .water-hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .water-hero::before {
+      z-index: -1;
+      opacity: .22;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E");
+      mix-blend-mode: soft-light;
+    }
+
+    .water-hero::after {
+      z-index: 0;
+      background: linear-gradient(110deg, rgba(255,255,255,.16), transparent 34%, rgba(255,255,255,.1));
+    }
+
+    .water-copy {
+      z-index: 2;
+      width: min(100%, 650px);
+      padding: clamp(1.8rem, 5vw, 3.8rem);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,.62);
+      border-radius: 1.25rem;
+      background: rgba(255,255,255,.24);
+      box-shadow: 0 24px 70px rgba(23, 96, 127, .16), inset 0 1px rgba(255,255,255,.6);
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+    }
+
+    .water-copy h1 {
+      margin: 0 0 .7rem;
+      font-size: clamp(2.4rem, 7vw, 5.6rem);
+      line-height: .96;
+      letter-spacing: -.045em;
+      font-weight: 500;
+    }
+
+    .water-copy p {
+      max-width: 32rem;
+      margin: 0 auto 1.6rem;
+      color: rgba(7,59,92,.78);
+      font: 400 clamp(1rem, 2vw, 1.2rem)/1.6 system-ui, sans-serif;
+    }
+
+    .water-copy a {
+      display: inline-block;
+      padding: .8rem 1.25rem;
+      color: #fff;
+      background: var(--water-accent);
+      border-radius: 999px;
+      font: 700 .78rem/1 system-ui, sans-serif;
+      letter-spacing: .08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 8px 20px rgba(8,126,164,.25);
+    }
+
+    .wave {
+      position: absolute;
+      z-index: 1;
+      bottom: -1px;
+      left: -18%;
+      width: 136%;
+      height: clamp(150px, 24vw, 270px);
+      pointer-events: none;
+      will-change: transform;
+      animation: wave-drift 19s linear infinite;
+    }
+
+    .wave svg { display: block; width: 100%; height: 100%; }
+    .wave path { fill: #fff; }
+    .wave-one { opacity: .3; animation-duration: 24s; }
+    .wave-two { bottom: -28px; opacity: .22; animation-duration: 17s; animation-direction: reverse; }
+    .wave-three { bottom: -52px; opacity: .4; animation-duration: 30s; }
+
+    .bubble,
+    .drop {
+      position: absolute;
+      z-index: 1;
+      pointer-events: none;
+      will-change: transform, opacity;
+    }
+
+    .bubble {
+      width: var(--size);
+      aspect-ratio: 1;
+      left: var(--x);
+      top: var(--y);
+      border: 1px solid rgba(255,255,255,.7);
+      border-radius: 50%;
+      background: radial-gradient(circle at 31% 25%, rgba(255,255,255,.95) 0 7%, rgba(255,255,255,.36) 20%, rgba(167,225,242,.16) 61%, rgba(255,255,255,.4) 100%);
+      box-shadow: inset -5px -7px 10px rgba(48,142,173,.09), 0 5px 16px rgba(39,118,150,.1);
+      animation: bubble-float var(--speed) ease-in-out var(--delay) infinite alternate;
+    }
+
+    .drop {
+      top: -8vh;
+      left: var(--x);
+      width: var(--size);
+      aspect-ratio: .76;
+      border-radius: 50% 50% 50% 0;
+      border: 1px solid rgba(255,255,255,.65);
+      background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(89,190,220,.3));
+      box-shadow: inset 3px 3px 5px rgba(255,255,255,.7), 3px 8px 13px rgba(18,102,135,.14);
+      transform: rotate(-45deg);
+      animation: drop-fall var(--speed) cubic-bezier(.45,0,.7,1) var(--delay) infinite;
+    }
+
+    @keyframes wave-drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-12%); }
+    }
+
+    @keyframes bubble-float {
+      0% { transform: translate3d(-8px, 16px, 0) scale(.94); opacity: .35; }
+      100% { transform: translate3d(12px, -32px, 0) scale(1.05); opacity: .82; }
+    }
+
+    @keyframes drop-fall {
+      0% { transform: translate3d(0, -5vh, 0) rotate(-45deg); opacity: 0; }
+      10% { opacity: .72; }
+      82% { opacity: .7; }
+      100% { transform: translate3d(18px, 112vh, 0) rotate(-39deg); opacity: 0; }
+    }
+    @media (max-width: 767px) {
+      .water-hero { min-height: 620px; padding: 1.2rem; }
+      .water-copy { padding: 1.8rem 1.25rem; }
+      .wave { height: 135px; }
+      .bubble:nth-child(n+6), .drop:nth-child(n+12) { display: none; }
+      .bubble { transform: scale(.72); }
+      .drop { transform: rotate(-45deg) scale(.75); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .wave, .bubble, .drop, .drop::after { animation-play-state: paused; }
+    }
+  </style>
+</head>
+<body>
+  <section class="water-hero water-bg">
+    <canvas class="water-canvas" aria-hidden="true"></canvas>
+    <div class="bubble" style="--size: 22px; --x: 8%; --y: 24%; --speed: 7s; --delay: -1s"></div>
+    <div class="bubble" style="--size: 48px; --x: 17%; --y: 64%; --speed: 10s; --delay: -6s"></div>
+    <div class="bubble" style="--size: 14px; --x: 31%; --y: 17%; --speed: 6s; --delay: -3s"></div>
+    <div class="bubble" style="--size: 34px; --x: 71%; --y: 22%; --speed: 9s; --delay: -5s"></div>
+    <div class="bubble" style="--size: 58px; --x: 87%; --y: 47%; --speed: 12s; --delay: -2s"></div>
+    <div class="bubble" style="--size: 18px; --x: 78%; --y: 72%; --speed: 8s; --delay: -7s"></div>
+    <div class="bubble" style="--size: 28px; --x: 44%; --y: 76%; --speed: 11s; --delay: -4s"></div>
+    <div class="bubble" style="--size: 12px; --x: 56%; --y: 12%; --speed: 7s; --delay: -8s"></div>
+
+    <!-- Removed drop elements as per patch -->
+
+    <div class="water-copy">
+      <p>Quietly engineered systems for cleaner water, stronger operations, and a more resilient tomorrow.</p>
+      <a href="applications.html">Explore solutions</a>
+    </div>
+
+    <div class="wave wave-one" aria-hidden="true"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 160C180 80 330 250 540 168S900 82 1100 170s230 58 340-12v162H0Z"/></svg></div>
+    <div class="wave wave-two" aria-hidden="true"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 210C180 125 360 210 560 188s320-120 520-20 235 118 360 28v124H0Z"/></svg></div>
+    <div class="wave wave-three" aria-hidden="true"><svg viewBox="0 0 1440 320" preserveAspectRatio="none"><path d="M0 230c220-94 370 38 580-26s330-50 490 16 256 48 370-5v105H0Z"/></svg></div>
+  </section>
+  <script src="/js/water-ripple.js"></script>
+  <script src="/js/contact-widget.js"></script>
+</body>
+</html>

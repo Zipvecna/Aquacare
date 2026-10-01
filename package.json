@@ -1,0 +1,13 @@
+{
+  "name": "aquacare-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aqua Care Trading website",
+  "scripts": {
+    "start": "powershell -ExecutionPolicy Bypass -File .\\server.ps1",
+    "check": "node --check js\\data.js && node --check js\\app.js && node --check js\\calculator.js && node --check js\\catalog.js"
+  },
+  "dependencies": {
+    "fuse.js": "^7.5.0"
+  }
+}

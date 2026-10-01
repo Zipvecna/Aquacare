@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    #industrial-water,
+    #boiler-water,
+    #cooling-water { scroll-margin-top: 110px; }
+  </style>
+</head>
+<body>
+  <div class="bg-watermark" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <div data-site-header></div>
+
+  <main>
+    <!-- Application 1: Drinking Water Treatment -->
+    <section class="section water-bg" id="drinking-water" style="padding-top: 116px;">
+      <canvas class="water-canvas" aria-hidden="true"></canvas>
+      <div class="container">
+        <!-- Page Header -->
+        <div style="text-align: center; max-width: 860px; margin: 0 auto 36px;">
+          <div class="badge-tag">Process Chemistry & Technical Engineering</div>
+          <h1 class="section-title" style="font-size: 2.6rem; margin-bottom: 14px;">
+            Chemical Applications & <span class="text-gradient">Treatment Processes</span>
+          </h1>
+          <p class="section-desc" style="font-size: 1.05rem; margin-bottom: 24px;">
+            Explore chemical reaction pathways, injection points, and treatment architectures across municipal drinking water, boilers, cooling water, and RO systems.
+          </p>
+
+          <!-- Quick Jump Filter Links -->
+          <div class="filter-pills" style="justify-content: center;">
+            <a href="#drinking-water" class="filter-btn active">Drinking Water</a>
+            <a href="#industrial-water" class="filter-btn">Industrial Water</a>
+            <a href="#wastewater-treatment" class="filter-btn">Wastewater</a>
+            <a href="#boiler-water" class="filter-btn">Boiler Water</a>
+            <a href="#cooling-tower" class="filter-btn">Cooling Water</a>
+            <a href="#ro-systems" class="filter-btn">Reverse Osmosis (RO)</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="glass-card drinking-water-card">
+          <div class="badge-tag">Application 01</div>
+          <h2 class="drinking-water-title">Drinking Water Treatment <svg class="drinking-water-droplet" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S5 10.4 5 15a7 7 0 0 0 14 0c0-4.6-7-12.5-7-12.5Z"/></svg></h2>
+          <p class="drinking-water-description">Drinking water treatment is defined as the process of purifying water from various sources, including groundwater, surface water, and rainwater, through methods such as coagulation, sedimentation, filtration, and disinfection to make it safe for human consumption. This treatment can occur at municipal water treatment plants or through point of use systems that utilize various filtration and disinfection techniques.</p>
+          <div class="drinking-water-process" aria-label="Drinking water treatment process">
+            <div class="drinking-water-step">
+              <span class="drinking-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="15" cy="17" r="4"/><circle cx="32" cy="14" r="3"/><circle cx="28" cy="32" r="4"/><circle cx="13" cy="31" r="2.5"/><path d="m19 18 9-3M17 21l9 8m-9 2 7 0m6-4 2-10"/></svg></span>
+              <span class="drinking-water-step-label">Coagulation</span>
+            </div>
+            <div class="drinking-water-step">
+              <span class="drinking-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 9h28l-3 28H13L10 9Zm3 7h22M14 29h20M18 24h12M16 34h16"/><path d="M16 20h2m5 0h2m5 0h2"/></svg></span>
+              <span class="drinking-water-step-label">Sedimentation</span>
+            </div>
+            <div class="drinking-water-step">
+              <span class="drinking-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M10 10h28L27 27v10l-6 3V27L10 10Z"/><path d="M16 17h16M19 22h10M22 27h4"/></svg></span>
+              <span class="drinking-water-step-label">Filtration</span>
+            </div>
+            <div class="drinking-water-step">
+              <span class="drinking-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><path d="M24 5v6m0 26v6M5 24h6m26 0h6M10.6 10.6l4.2 4.2m18.4 18.4 4.2 4.2m0-26.8-4.2 4.2m-18.4 18.4-4.2 4.2"/></svg></span>
+              <span class="drinking-water-step-label">Disinfection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application 2: Industrial Process Water Treatment -->
+    <section class="section" style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="glass-card industrial-water-card" id="industrial-water">
+          <div class="badge-tag">Application 02</div>
+          <h2 class="industrial-water-title">Industrial Water Treatment <svg class="industrial-water-droplet" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S5 10.4 5 15a7 7 0 0 0 14 0c0-4.6-7-12.5-7-12.5Z"/></svg></h2>
+          <div class="industrial-water-description">
+            <p>Industrial water treatment encompasses the purification of incoming raw water and the cleanup of facility wastewater to protect machinery, ensure product quality, and meet environmental regulations.</p>
+            <section class="industrial-water-detail-group">
+              <h3>Key Treatment Streams</h3>
+              <ul>
+                <li><strong>Makeup/Raw Water Treatment:</strong> Prepares natural water sources (rivers, groundwater) for specific tasks like boiler feed or cooling towers by removing minerals, hardness, and suspended solids to prevent scaling and corrosion.</li>
+                <li><strong>Wastewater/Effluent Treatment:</strong> Cleans used water from manufacturing before safe discharge or reuse through physical, chemical, and biological methods.</li>
+              </ul>
+            </section>
+            <section class="industrial-water-detail-group">
+              <h3>Core Processes and Technologies</h3>
+              <ul>
+                <li><strong>Physical &amp; Mechanical:</strong> Screening, sedimentation, and media filtration remove large debris, grit, and suspended particles.</li>
+                <li><strong>Chemical Treatment:</strong> Coagulation, flocculation, and pH neutralization group fine particles together and balance water chemistry.</li>
+                <li><strong>Biological Treatment:</strong> Activated sludge systems and microbial processes break down organic matter, nitrogen, and phosphorus.</li>
+                <li><strong>Advanced Separation:</strong> Reverse Osmosis (RO), ion exchange, and Nanofiltration remove dissolved salts and heavy metals for ultra-pure requirements.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="industrial-water-process" aria-label="Industrial water treatment process">
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 10h30L27 27v10l-6 3V27L9 10Z"/><path d="M15 17h18M18 22h12M22 27h4"/></svg></span>
+              <span class="industrial-water-step-label">Physical &amp; Mechanical</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="14" cy="16" r="3"/><circle cx="33" cy="13" r="2.5"/><circle cx="29" cy="33" r="3.5"/><circle cx="13" cy="32" r="2"/><path d="m18 17 11-3M16 19l10 11m-9 2 8 0m7-4 2-12"/></svg></span>
+              <span class="industrial-water-step-label">Chemical Treatment</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 8c8 0 14 7 14 15s-6 17-14 17S10 31 10 23 16 8 24 8Z"/><path d="M19 19c1-2 4-2 5 0s-1 4-3 5-2 4 0 5m8-13 2 2m-15 8-3 1m20 2-3-1m-6-13v-3"/><circle cx="18" cy="25" r="1"/><circle cx="29" cy="28" r="1.5"/></svg></span>
+              <span class="industrial-water-step-label">Biological Treatment</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="28" rx="2"/><path d="M9 17h30M9 24h30M9 31h30M16 10v28m8-28v28m8-28v28"/></svg></span>
+              <span class="industrial-water-step-label">Advanced Separation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application 3: Wastewater Treatment -->
+    <section class="section" id="wastewater-treatment">
+      <div class="container">
+        <div class="glass-card wastewater-water-card">
+          <div class="badge-tag">Application 03</div>
+          <h2 class="wastewater-water-title">Waste Water Treatment <svg class="wastewater-water-droplet" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S5 10.4 5 15a7 7 0 0 0 14 0c0-4.6-7-12.5-7-12.5Z"/></svg></h2>
+          <div class="wastewater-water-description">
+            <p>Waste water treatment is a multi step process that removes physical, chemical, and biological contaminants from used water so it can be safely returned to the environment or reused.</p>
+            <section class="wastewater-water-detail-group">
+              <h3>Main Stages of Treatment</h3>
+              <ul>
+                <li><strong>Preliminary Treatment:</strong> Screens and filters out large objects like plastics, rags, and grit to protect plant equipment.</li>
+                <li><strong>Primary Treatment:</strong> Uses sedimentation tanks to slow water down, allowing heavier solids to settle as sludge and oils to float as scum.</li>
+                <li><strong>Secondary Treatment:</strong> Employs microorganisms and aerobic bacteria in aeration tanks to break down dissolved and biological organic matter.</li>
+                <li><strong>Tertiary Treatment:</strong> Uses chemical disinfection, ultraviolet (UV) light, or filtration to remove remaining nutrients (like nitrogen and phosphorus) and pathogens.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="wastewater-water-process" aria-label="Waste water treatment process">
+            <div class="wastewater-water-step">
+              <span class="wastewater-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="28" rx="2"/><path d="M9 17h30M9 24h30M9 31h30M16 10v28m8-28v28m8-28v28"/></svg></span>
+              <span class="wastewater-water-step-label">Preliminary Treatment</span>
+            </div>
+            <div class="wastewater-water-step">
+              <span class="wastewater-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 10h32v27H8zM8 18h32M8 29h32M13 24h22M16 34h16"/><path d="M13 14h22"/></svg></span>
+              <span class="wastewater-water-step-label">Primary Treatment</span>
+            </div>
+            <div class="wastewater-water-step">
+              <span class="wastewater-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 8c8 0 14 7 14 15s-6 17-14 17S10 31 10 23 16 8 24 8Z"/><path d="M19 19c1-2 4-2 5 0s-1 4-3 5-2 4 0 5m8-13 2 2m-15 8-3 1m20 2-3-1m-6-13v-3"/><circle cx="18" cy="25" r="1"/><circle cx="29" cy="28" r="1.5"/></svg></span>
+              <span class="wastewater-water-step-label">Secondary Treatment</span>
+            </div>
+            <div class="wastewater-water-step">
+              <span class="wastewater-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="7"/><path d="M24 5v6m0 26v6M5 24h6m26 0h6M10.6 10.6l4.2 4.2m18.4 18.4 4.2 4.2m0-26.8-4.2 4.2m-18.4 18.4-4.2 4.2"/></svg></span>
+              <span class="wastewater-water-step-label">Tertiary Treatment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application 4: Boiler Water Treatment -->
+    <section class="section" style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="glass-card boiler-water-card" id="boiler-water">
+          <div class="badge-tag">Application 04</div>
+          <h2 class="boiler-water-title">Boiler Water Treatment <svg class="boiler-water-droplet" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S5 10.4 5 15a7 7 0 0 0 14 0c0-4.6-7-12.5-7-12.5Z"/></svg></h2>
+          <div class="boiler-water-description">
+            <p>Internal treatment of boiler feed water is the process of adding specific chemicals directly into the boiler system to react with residual impurities, prevent scale and corrosion, and condition sludge.</p>
+            <p>Even when water goes through external softening first, small amounts of hardness-causing minerals and gases still enter the boiler. Internal treatment acts as the final shield to protect metal surfaces and maintain safe operations.</p>
+            <section class="boiler-water-detail-group">
+              <h3>Core Goals</h3>
+              <ul>
+                <li><strong>Prevent Scale:</strong> Stop hard mineral deposits from sticking to hot boiler tubes.</li>
+                <li><strong>Stop Corrosion:</strong> Remove leftover oxygen and balance water alkalinity.</li>
+                <li><strong>Control Foaming:</strong> Prevent bubbles and boiling water carryover into the steam lines.</li>
+                <li><strong>Manage Sludge:</strong> Keep suspended solid particles loose so they can be flushed out.</li>
+              </ul>
+            </section>
+            <section class="boiler-water-detail-group">
+              <h3>Main Internal Treatment Methods</h3>
+              <ul>
+                <li><strong>Colloidal Conditioning:</strong> Agents like kerosene, tannin, or agar-agar are added to low-pressure boilers. They coat tiny scale particles, stopping them from sticking to the walls so they can be blown down easily.</li>
+                <li><strong>Phosphate Conditioning:</strong> Trisodium phosphate is added to react with calcium and magnesium. This turns them into a soft, non-adherent sludge (calcium phosphate) that settles at the bottom and leaves through the bottom blowdown.</li>
+                <li><strong>Calgon Conditioning:</strong> Sodium hexametaphosphate (Calgon) is used to bind calcium ions into a water-soluble complex. This prevents solid scale from forming even under high heat.</li>
+                <li><strong>Carbonate Conditioning:</strong> Sodium carbonate is added in lower-pressure systems to turn calcium and magnesium into removable insoluble precipitates.</li>
+                <li><strong>Oxygen Scavenging:</strong> Chemicals like hydrazine or sodium sulfite are injected to absorb leftover dissolved oxygen gas, preventing rust and pitting in the feed lines and drum.</li>
+                <li><strong>Anti-Foaming Agents:</strong> Compounds like castor oil or polyamides are added to break up surface foam and stop water droplets from mixing into the generated steam.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="boiler-water-process" aria-label="Core process">
+            <div class="boiler-water-process-steps">
+              <div class="boiler-water-step">
+                <span class="boiler-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="m8 32 8-12 7 6 7-14 10 20H8Z"/><path d="M12 36h24M18 26l5 4 7-13"/></svg></span>
+                <span class="boiler-water-step-label">Prevent Scale</span>
+              </div>
+              <div class="boiler-water-step">
+                <span class="boiler-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6 38 12v10c0 9-6 15-14 20-8-5-14-11-14-20V12l14-6Z"/><path d="m17 24 5 5 10-11"/></svg></span>
+                <span class="boiler-water-step-label">Stop Corrosion</span>
+              </div>
+              <div class="boiler-water-step">
+                <span class="boiler-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="13" cy="30" r="4"/><circle cx="24" cy="19" r="5"/><circle cx="35" cy="29" r="3.5"/><circle cx="19" cy="38" r="2"/><circle cx="31" cy="12" r="2"/><path d="M8 42h32"/></svg></span>
+                <span class="boiler-water-step-label">Control Foaming</span>
+              </div>
+              <div class="boiler-water-step">
+                <span class="boiler-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 10h30v28H9zM9 29h30M9 34h30"/><circle cx="17" cy="19" r="1.5"/><circle cx="25" cy="23" r="1.5"/><circle cx="33" cy="16" r="1.5"/><path d="M17 22v4m8-1v4m8-8v5"/></svg></span>
+                <span class="boiler-water-step-label">Manage Sludge</span>
+              </div>
+            </div>
+          </div>
+          <p class="boiler-water-closing">Would you like to learn more about external water treatment methods (like ion exchange or reverse osmosis) or how blowdown operations work to remove the conditioned sludge?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application 5: Cooling Tower Treatment -->
+    <section class="section" id="cooling-tower">
+      <div class="container">
+        <div class="glass-card industrial-water-card cooling-water-card" id="cooling-water">
+          <div class="badge-tag">Application 05</div>
+          <h2 class="industrial-water-title">Cooling Water Treatment <svg class="industrial-water-droplet" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S5 10.4 5 15a7 7 0 0 0 14 0c0-4.6-7-12.5-7-12.5Z"/></svg></h2>
+          <div class="industrial-water-description">
+            <p>Cooling water treatment is the process of managing water quality in industrial cooling systems to prevent scaling, corrosion, fouling, and biological growth.</p>
+            <section class="industrial-water-detail-group">
+              <h3>Makeup Water Pre-Treatment</h3>
+              <p>Raw source water (from wells or rivers) is conditioned before entering the system.</p>
+              <ul>
+                <li><strong>Filtration:</strong> Removes suspended solids and debris using sand or ultrafiltration screens.</li>
+                <li><strong>Softening / Demineralization:</strong> Uses ion exchange or reverse osmosis to remove hardness minerals like calcium and magnesium that cause scale.</li>
+              </ul>
+            </section>
+            <section class="industrial-water-detail-group">
+              <h3>Internal Chemical Treatment</h3>
+              <ul>
+                <li><strong>Scale Inhibitors:</strong> Chemicals like phosphonates and polymers stop minerals from sticking to heat exchangers.</li>
+                <li><strong>Corrosion Inhibitors:</strong> Products like azoles or phosphates form a protective shield on metal pipes.</li>
+                <li><strong>Biocides:</strong> Oxidizing (chlorine, bromine) and non-oxidizing chemicals kill bacteria, algae, and fungi to prevent biofouling.</li>
+                <li><strong>pH Control:</strong> Acids or bases are added to keep the water pH in a safe, non-corrosive range.</li>
+              </ul>
+            </section>
+            <section class="industrial-water-detail-group">
+              <h3>Blowdown and Monitoring</h3>
+              <ul>
+                <li><strong>Blowdown (Bleed):</strong> A portion of concentrated water is drained regularly and replaced with fresh makeup water to control total dissolved solids (TDS) buildup from evaporation.</li>
+                <li><strong>Routine Testing:</strong> Operators continuously check conductivity, pH, and microbial levels to adjust chemical feed rates.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="industrial-water-process" aria-label="Cooling water treatment process">
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 9h30L27 25v13l-6 3V25L9 9Z"/><path d="M15 15h18M18 20h12M22 25h4"/></svg></span>
+              <span class="industrial-water-step-label">Pre-Treatment</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="14" cy="16" r="3"/><circle cx="33" cy="13" r="2.5"/><circle cx="29" cy="33" r="3.5"/><circle cx="13" cy="32" r="2"/><path d="m18 17 11-3M16 19l10 11m-9 2 8 0m7-4 2-12"/></svg></span>
+              <span class="industrial-water-step-label">Chemical Treatment</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 6 38 12v10c0 9-6 15-14 20-8-5-14-11-14-20V12l14-6Z"/><path d="m17 24 5 5 10-11"/></svg></span>
+              <span class="industrial-water-step-label">Corrosion Control</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 12h32v27H8zM8 19h32M8 30h32M8 35h32"/><path d="M13 25h22M16 34v5m8-5v5m8-5v5"/></svg></span>
+              <span class="industrial-water-step-label">Blowdown &amp; Monitoring</span>
+            </div>
+          </div>
+          <p class="boiler-water-closing">If you'd like, let me know:<br>Is your system an open recirculating or closed-loop system?<br>What specific water quality issue or challenge are you trying to solve?</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application 6: Reverse Osmosis (RO) Systems -->
+    <section class="section" id="ro-systems" style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+      <div class="container">
+        <div class="glass-card industrial-water-card ro-water-card">
+          <div class="badge-tag">Application 06</div>
+          <h2 class="industrial-water-title">Reverse Osmosis (RO) Water Treatment <svg class="industrial-water-droplet" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5S5 10.4 5 15a7 7 0 0 0 14 0c0-4.6-7-12.5-7-12.5Z"/></svg></h2>
+          <div class="industrial-water-description">
+            <p>A reverse osmosis (RO) water treatment plant purifies water by forcing it through a semi-permeable membrane under high pressure to remove dissolved salts, minerals, and impurities.</p>
+            <p>The RO treatment process operates through three main phases: pre-treatment, membrane separation, and post-treatment.</p>
+            <section class="industrial-water-detail-group">
+              <h3>Pre-Treatment Process</h3>
+              <p class="ro-water-section-intro">Pre-treatment prepares the raw water and protects the delicate RO membranes from clogging or damage.</p>
+              <ul>
+                <li><strong>Raw Water Intake:</strong> Water is pumped from a source like groundwater, a river, or municipal lines into a feed tank.</li>
+                <li><strong>Multimedia / Sand Filter:</strong> Water passes through a sand or multi-bed filter to trap large suspended solids, dirt, and turbidity.</li>
+                <li><strong>Activated Carbon Filter:</strong> This filter absorbs chlorine, chloramines, and organic chemicals that can ruin an RO membrane.</li>
+                <li><strong>Antiscalant Dosing:</strong> Chemicals are added to prevent mineral scaling (such as calcium and magnesium buildup) on the membrane surface.</li>
+                <li><strong>Cartridge Filter:</strong> A fine microfilter catches tiny leftover particles just before the water enters the high-pressure pump.</li>
+              </ul>
+            </section>
+            <section class="industrial-water-detail-group">
+              <h3>Reverse Osmosis (RO) Membrane Separation</h3>
+              <p class="ro-water-section-intro">This is the core stage where purification actually takes place.</p>
+              <ul>
+                <li><strong>High-Pressure Pump:</strong> A strong pump pressurizes the pre-treated water to overcome the natural osmotic pressure of the solution.</li>
+                <li><strong>Pressure Vessels &amp; Membranes:</strong> Pressurized water enters vessels containing spiral-wound semi-permeable membranes.</li>
+                <li><strong>Permeate and Reject Streams:</strong> The membrane allows pure water molecules to pass through (called permeate or product water) while trapping up to 99% of dissolved salts and contaminants. These trapped impurities flow out in a separate wastewater stream (called reject or concentrate water).</li>
+              </ul>
+            </section>
+            <section class="industrial-water-detail-group">
+              <h3>Post-Treatment and Storage</h3>
+              <p class="ro-water-section-intro">The final stage prepares the purified water for safe consumption or industrial use.</p>
+              <ul>
+                <li><strong>Disinfection:</strong> Treated water may pass through a ultraviolet (UV) sterilizer or ozone system to kill any lingering bacteria or viruses.</li>
+                <li><strong>Remineralization:</strong> Essential minerals can be added back if the water is meant for drinking and needs a better taste or balanced pH.</li>
+                <li><strong>Storage Tank:</strong> Purified water is kept in a clean storage tank until it is pumped out for distribution.</li>
+              </ul>
+            </section>
+          </div>
+          <div class="industrial-water-process ro-water-process" aria-label="Reverse osmosis treatment process">
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 9h30L27 25v13l-6 3V25L9 9Z"/><path d="M15 15h18M18 20h12M22 25h4"/></svg></span>
+              <span class="industrial-water-step-label">Pre-Treatment</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="9" y="10" width="30" height="28" rx="2"/><path d="M9 17h30M9 24h30M9 31h30M16 10v28m8-28v28m8-28v28"/></svg></span>
+              <span class="industrial-water-step-label">Membrane Separation</span>
+            </div>
+            <div class="industrial-water-step">
+              <span class="industrial-water-step-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M8 12h32v27H8zM8 19h32M8 30h32M8 35h32"/><path d="M13 25h22M16 34v5m8-5v5m8-5v5"/></svg></span>
+              <span class="industrial-water-step-label">Post-Treatment</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- OFFICIAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container container-wide">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 12px; display: inline-block;">
+            <img src="assets/logo.png" alt="Aqua Care - The Water Treatment Company" class="footer-logo-img">
+          </a>
+          <div style="font-weight: 800; color: var(--blue-navy); font-size: 1rem; margin-bottom: 4px;">Aqua Care Trading</div>
+          <p style="font-size: 0.9rem; line-height: 1.5; color: var(--text-secondary); margin-bottom: 14px;">
+            Sapnadanga R/A, Bhaban #04, Flat #5C<br>
+            West Dhanmondi, Hajaribag<br>
+            Dhaka-1209, Bangladesh
+          </p>
+          <div style="font-size: 0.88rem; color: var(--text-secondary);">
+            <div><strong>Phone & Fax:</strong> +88-02-9672552</div>
+            <div><strong>Cell:</strong> 01911-350427 / 01793-591851</div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="chemicals.html">Products</a></li>
+            <li><a href="applications.html">Solutions</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li><a href="index.html#team">Our Team</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Business</h4>
+          <ul class="footer-links">
+            <li><a href="applications.html">Raw Water Clarification</a></li>
+            <li><a href="applications.html">Boiler Water</a></li>
+            <li><a href="applications.html">Cooling Water</a></li>
+            <li><a href="applications.html">Ion Exchange</a></li>
+            <li><a href="applications.html">Reverse Osmosis</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contact Us</h4>
+          <ul class="footer-contact-info">
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Sapnadanga R/A, Bhaban #04, Flat #5C, West Dhanmondi, Hajaribag, Dhaka-1209, Bangladesh</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+88-02-9672552</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 18h.01M8 21h8a2 2 0 0 1 2-2V5a2 2 0 0 1-2-2H8a2 2 0 0 1-2 2v14a2 2 0 0 1 2 2z"></path></svg>
+              <span>01911-350427 / 01793-591851</span>
+            </li>
+            <li>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:aquacaretrading67@gmail.com" style="color: inherit; text-decoration: none; transition: color 0.3s;">aquacaretrading67@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© Aqua Care — The Water Treatment Company</div>
+        <div>© <span id="currentYear">2026</span> Aqua Care. All Rights Reserved. <a href="privacy.html">Privacy</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TDS Modal -->
+  <div class="modal-overlay" id="tdsModal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div>
+          <div class="badge-tag" id="tdsCategory" style="margin-bottom: 6px;">Category</div>
+          <h3 id="tdsModalTitle" style="font-size: 1.6rem; font-weight: 800; color: var(--blue-navy);">Chemical Title</h3>
+          <div id="tdsTradeName" style="color: var(--cyan); font-weight: 600; font-size: 0.95rem;">Trade Name</div>
+        </div>
+        <button class="modal-close-btn" data-action="close-modal" aria-label="Close modal">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 20px; flex-wrap: wrap;">
+          <div class="chem-formula-box" id="tdsFormula" style="margin-bottom: 0;">Formula</div>
+          <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--text-dim);" id="tdsCas">CAS No:</div>
+        </div>
+        <div class="tds-info-box">
+          <strong style="color: var(--blue-navy); display: block; margin-bottom: 4px;">Primary Purpose:</strong>
+          <span id="tdsPurpose" style="color: var(--text-secondary);"></span>
+        </div>
+        <div style="margin: 20px 0;">
+          <h4 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--cyan); margin-bottom: 10px;">Technical Specifications</h4>
+          <table class="tds-specs-table">
+            <thead><tr><th>Parameter</th><th>Specification</th></tr></thead>
+            <tbody id="tdsSpecsTableBody"></tbody>
+          </table>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 20px;">
+          <div style="background: var(--bg-surface-alt); border: 1px solid var(--border-subtle); padding: 16px; border-radius: 8px;">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700;">Treatment Application</div>
+            <div id="tdsApplication" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;"></div>
+          </div>
+          <div style="background: var(--bg-surface-alt); border: 1px solid var(--border-subtle); padding: 16px; border-radius: 8px;">
+            <div style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700;">Dosage Guide</div>
+            <div id="tdsDosage" style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 4px;"></div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 0.78rem; text-transform: uppercase; color: var(--text-dim); font-weight: 700; margin-bottom: 6px;">Available Packaging:</div>
+          <div class="packaging-pills" id="tdsPackagingList"></div>
+        </div>
+        <div style="margin-top: 20px; background: rgba(239, 68, 68, 0.08); border-left: 3px solid #ef4444; padding: 12px 16px; border-radius: 0 6px 6px 0;">
+          <strong style="color: #ef4444; font-size: 0.85rem; text-transform: uppercase;">Safe Handling & Storage:</strong>
+          <p id="tdsSafety" style="font-size: 0.88rem; color: #b91c1c; margin-top: 4px;"></p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script type="module" src="js/fuse-loader.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/water-ripple.js"></script>
+  <script src="/js/contact-widget.js"></script>
+</body>
+</html>
