@@ -19,7 +19,6 @@
 
   const CONFIG = {
     whatsappNumber: "8801793591851",
-    whatsappNumbers: ["8801793591851", "8801911350427"],
     emailAddress: window.AQUA_DATA?.company?.email?.[0] || "aquacaretrading67@gmail.com",
     interests: Array.isArray(window.AQUA_DATA?.chemicals) && window.AQUA_DATA.chemicals.length
       ? window.AQUA_DATA.chemicals.map((chem) => chem.name).filter(Boolean)
@@ -64,8 +63,7 @@
           <label>Message<textarea name="message" rows="3" maxlength="2000"></textarea></label>
           <div class="contact-widget-error" role="alert" aria-live="polite" hidden></div>
           <div class="contact-widget-actions">
-            <button class="contact-widget-action contact-widget-whatsapp" type="submit" data-channel="whatsapp" data-whatsapp-number="${CONFIG.whatsappNumbers[0]}">WhatsApp</button>
-            <button class="contact-widget-action contact-widget-whatsapp-alt" type="submit" data-channel="whatsapp-alt" data-whatsapp-number="${CONFIG.whatsappNumbers[1]}">WhatsApp</button>
+            <button class="contact-widget-action contact-widget-whatsapp" type="submit" data-channel="whatsapp" data-whatsapp-number="${CONFIG.whatsappNumber}">WhatsApp</button>
             <button class="contact-widget-action contact-widget-email" type="submit" data-channel="email">Email</button>
           </div>
         </form>
@@ -389,7 +387,7 @@
       const channel = event.submitter?.dataset.channel;
       const whatsappNumber = event.submitter?.dataset.whatsappNumber || CONFIG.whatsappNumber;
 
-      if (channel === "whatsapp" || channel === "whatsapp-alt") {
+      if (channel === "whatsapp") {
         const message = formatWhatsAppMessage(fields);
         window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
       } else {
