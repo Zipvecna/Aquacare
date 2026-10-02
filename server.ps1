@@ -1,5 +1,6 @@
 $rootDir = $PSScriptRoot
 if (-not $rootDir) { $rootDir = Get-Location }
+$rootDir = Join-Path $rootDir "public"
 $rootPath = [System.IO.Path]::GetFullPath($rootDir)
 $rootPrefix = $rootPath.TrimEnd('\') + '\'
 
@@ -10,11 +11,11 @@ $startedPort = $null
 foreach ($port in $portsToTry) {
     try {
         $l = New-Object System.Net.HttpListener
-        $l.Prefixes.Add("http://localhost:$port/")
+        $l.Prefixes.Add("http://127.0.0.1:$port/")
         $l.Start()
         $listener = $l
         $startedPort = $port
-        Write-Output "HTTP server running at http://localhost:$port/"
+        Write-Output "HTTP server running at http://127.0.0.1:$port/"
         break
     } catch {
         if ($l) { $l.Close() }
@@ -69,7 +70,12 @@ while ($listener.IsListening) {
             $urlPath = "/index.html"
         }
 
-        # Normalize relative path
+        if ($urlPath -match '(^|/)\.\.(/|$)' -or $urlPath.Contains('\')) {
+            $response.StatusCode = 400
+            $response.Close()
+            continue
+        }
+
         $relativePath = $urlPath.TrimStart('/').Replace('/', '\')
         $filePath = [System.IO.Path]::GetFullPath((Join-Path $rootPath $relativePath))
 
@@ -89,8 +95,9 @@ while ($listener.IsListening) {
             }
         } else {
             $response.StatusCode = 404
-            $msg = [System.Text.Encoding]::UTF8.GetBytes("404 Not Found")
-            $response.ContentType = "text/plain; charset=utf-8"
+            $notFoundPath = Join-Path $rootPath "404.html"
+            $msg = [System.IO.File]::ReadAllBytes($notFoundPath)
+            $response.ContentType = "text/html; charset=utf-8"
             $response.ContentLength64 = $msg.Length
             if ($request.HttpMethod -ne "HEAD") {
                 $response.OutputStream.Write($msg, 0, $msg.Length)

@@ -5,7 +5,7 @@
   "description": "Aqua Care Trading website",
   "scripts": {
     "start": "powershell -ExecutionPolicy Bypass -File .\\server.ps1",
-    "check": "node --check js\\data.js && node --check js\\app.js && node --check js\\calculator.js && node --check js\\catalog.js"
+    "check": "node --check public\\js\\data.js && node --check public\\js\\app.js && node --check public\\js\\calculator.js && node --check public\\js\\catalog.js"
   },
   "dependencies": {
     "fuse.js": "^7.5.0"
