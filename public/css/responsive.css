@@ -33,10 +33,11 @@ body {
   right: -320px;
   width: 310px;
   height: 100vh;
+  height: 100dvh;
   background: #ffffff;
   border-left: 1px solid var(--border-subtle);
   z-index: 1600;
-  padding: 24px 20px;
+  padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   transition: right var(--transition-normal);
