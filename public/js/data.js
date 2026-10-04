@@ -282,6 +282,18 @@ const AQUA_DATA = {
       badge: "RO Chemistry"
     }),
     createCatalogChemical({
+      id: "aquaclean-ro-65",
+      name: "Aquaclean RO 65",
+      tradeName: "Aquaclean RO 65",
+      formula: "",
+      category: "ro",
+      categoryName: "Reverse Osmosis (RO)",
+      purpose: "",
+      application: "",
+      dosageRange: "",
+      badge: "RO Chemistry"
+    }),
+    createCatalogChemical({
       id: "sokalan-ro-400",
       name: "Sokalan RO 400",
       tradeName: "Sokalan RO 400",
@@ -352,6 +364,18 @@ const AQUA_DATA = {
       application: "",
       dosageRange: "",
       badge: "RO Membrane Cleaner"
+    }),
+    createCatalogChemical({
+      id: "feedcare-721",
+      name: "Feedcare 721",
+      tradeName: "Feedcare 721",
+      formula: "",
+      category: "drinking-water",
+      categoryName: "Drinking Water",
+      purpose: "",
+      application: "",
+      dosageRange: "",
+      badge: "Drinking Water"
     })
   ],
 

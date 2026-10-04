@@ -297,8 +297,14 @@ body {
     grid-template-columns: 1fr !important;
     gap: 22px !important;
   }
-  main .calc-grid img {
+  main .calc-grid img:not(.site-logo-img):not(.contact-section-logo) {
     height: 220px !important;
+  }
+  main .calc-grid img.contact-section-logo {
+    width: 120px !important;
+    height: 80px !important;
+    max-width: 120px !important;
+    object-fit: contain;
   }
   main .calc-grid [style*="justify-content: space-between"] {
     flex-wrap: wrap;

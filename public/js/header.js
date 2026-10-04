@@ -162,8 +162,10 @@ function initHeaderSearch() {
     'ph-control': 'pH acid alkali caustic soda neutralization regeneration',
     specialty: 'specialty resin ion exchange filter media activated carbon'
   };
-  const products = Array.isArray(window.AQUA_DATA?.chemicals)
-    ? window.AQUA_DATA.chemicals.map(chemical => ({
+  const chemicals = Array.isArray(window.AQUA_DATA?.chemicals)
+    ? window.AQUA_DATA.chemicals
+    : [];
+  const products = chemicals.map(chemical => ({
         title: chemical.name,
         url: `chemicals.html?search=${encodeURIComponent(chemical.name)}`,
         description: chemical.purpose || chemical.application || '',
@@ -184,9 +186,19 @@ function initHeaderSearch() {
           categoryAliases[chemical.category] || '',
           'chemical product treatment'
         ].filter(Boolean).join(' ')
-      }))
-    : [];
-  const searchItems = [...SITE_SEARCH_PAGES, ...products];
+      }));
+  const categories = [...new Map(
+    chemicals
+      .filter(chemical => chemical.category && chemical.categoryName)
+      .map(chemical => [chemical.category, chemical.categoryName])
+  )].map(([category, categoryName]) => ({
+    title: categoryName,
+    url: `chemicals.html?search=${encodeURIComponent(categoryName)}`,
+    description: `Browse ${categoryName} water treatment chemicals.`,
+    keywords: [categoryName, category, categoryAliases[category] || ''].filter(Boolean).join(' '),
+    aliases: [categoryName, category, categoryAliases[category] || ''].filter(Boolean).join(' ')
+  }));
+  const searchItems = [...SITE_SEARCH_PAGES, ...categories, ...products];
   const searchIndex = new window.Fuse(searchItems, {
     threshold: 0.6,
     distance: 250,

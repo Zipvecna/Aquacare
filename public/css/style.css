@@ -430,9 +430,9 @@ img {
 }
 
 .site-logo-img {
-  height: 90px;
+  height: 65px;
   width: auto;
-  max-height: 92px;
+  max-height: 65px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 3px 10px rgba(0, 119, 182, 0.15));

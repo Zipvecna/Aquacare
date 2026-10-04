@@ -515,13 +515,13 @@
     <section class="section" id="contact"
       style="background: var(--bg-surface-alt); border-top: 1px solid var(--border-subtle);">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;" class="calc-grid">
-          <div>
-            <div class="badge-tag">Official Contact Information</div>
-            <img src="assets/logo.png" alt="Aqua Care Logo" class="h-10 w-auto mb-2" style="display: block; margin-bottom: 24px; max-height: 64px; width: auto;">
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: stretch;" class="calc-grid contact-layout">
+          <div class="contact-info-column">
+            <div class="badge-tag" style="display: inline-block; align-self: flex-start;">Official Contact Information</div>
+            <img src="assets/logo.png" alt="Aqua Care Logo" class="contact-section-logo" style="display: block; margin: 8px auto -12px 0; width: 120px; height: 80px; max-width: 120px; object-fit: contain; position: relative; z-index: 1;">
 
-            <div class="bg-white border rounded-xl shadow-sm p-6" style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 12px; box-shadow: var(--shadow-sm); padding: 20px; margin: 0;">
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start" style="display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.5rem; align-items:start;">
+            <div class="bg-white border rounded-xl shadow-sm p-6 contact-info-card" style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 12px; box-shadow: var(--shadow-sm); padding: 20px; margin: 0;">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start contact-info-content" style="display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.5rem; align-items:start;">
                 <div style="display: flex; flex-direction: column; gap: 0.75rem;">
                   <div>
                     <div style="font-weight: 800; color: var(--blue-navy); font-size: 1.1rem; margin-bottom: 6px;">Business /
