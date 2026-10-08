@@ -11,7 +11,6 @@ const SITE_HEADER_TEMPLATE = `
           <a href="index.html#about" class="nav-link">About Us</a>
           <a href="chemicals.html" class="nav-link" data-page="chemicals.html">Products</a>
           <a href="applications.html" class="nav-link" data-page="applications.html">Solutions</a>
-          <a href="index.html#projects" class="nav-link">Projects</a>
           <a href="index.html#team" class="nav-link">Our Team</a>
           <a href="index.html#contact" class="nav-link">Contact</a>
         </nav>
@@ -54,7 +53,6 @@ const SITE_HEADER_TEMPLATE = `
       <a href="index.html#about" class="drawer-link">About Us</a>
       <a href="chemicals.html" class="drawer-link" data-page="chemicals.html">Products</a>
       <a href="applications.html" class="drawer-link" data-page="applications.html">Solutions</a>
-      <a href="index.html#projects" class="drawer-link">Projects</a>
       <a href="index.html#team" class="drawer-link">Our Team</a>
       <a href="index.html#contact" class="drawer-link">Contact</a>
     </div>
@@ -117,13 +115,6 @@ const SITE_SEARCH_PAGES = [
     description: 'Explore drinking water, industrial water, wastewater, boiler, cooling, and RO solutions.',
     keywords: 'applications solutions treatment processes industrial wastewater drinking water boiler boyler cooling tower coolling reverse osmosis RO membrane',
     aliases: 'wastewater wastwater waste water boiler boyler cooling coolling reverse osmosis ro'
-  },
-  {
-    title: 'Projects',
-    url: 'index.html#projects',
-    description: 'Industrial water treatment projects and technical delivery experience.',
-    keywords: 'projects installations deployments technical support industrial plants case studies',
-    aliases: 'case studies installations deployments'
   },
   {
     title: 'Our Team',
