@@ -322,6 +322,23 @@ body {
   .modal-header, .modal-body, .modal-footer {
     padding: 20px;
   }
+  .tds-quick-facts {
+    grid-template-columns: 1fr 1fr;
+  }
+  .tds-detail-grid {
+    grid-template-columns: 1fr;
+  }
+  .modal-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .tds-footer-actions {
+    justify-content: flex-start;
+  }
+  .tds-pdf-action {
+    flex: 1 1 100%;
+    text-align: center;
+  }
   .tds-specs-table th, .tds-specs-table td {
     padding: 8px 10px;
     font-size: 0.84rem;

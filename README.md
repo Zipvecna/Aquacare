@@ -44,7 +44,7 @@ aquaCare/
 `-- AGENTS.md                 Contributor and coding instructions
 ```
 
-The site is deployed on Vercel. Set the Vercel Output Directory to `public`; the HTML pages, styles, browser scripts, and images live together there so their relative paths remain valid. Keep deployment and project documentation at the repository root.
+The site is deployed on Vercel at [https://www.aquacaretrading.com](https://www.aquacaretrading.com). Set the Vercel Output Directory to `public`; the HTML pages, styles, browser scripts, and images live together there so their relative paths remain valid. Keep deployment and project documentation at the repository root.
 
 ## Which file to edit
 

@@ -161,13 +161,37 @@ function openTDSModal(chemicalId) {
   // Populate TDS Modal Details
   document.getElementById('tdsModalTitle').textContent = chem.name;
   document.getElementById('tdsTradeName').textContent = chem.tradeName;
-  document.getElementById('tdsFormula').textContent = chem.formula;
-  document.getElementById('tdsCas').textContent = `CAS No: ${chem.cas}`;
+  const formula = document.getElementById('tdsFormula');
+  if (formula) {
+    formula.textContent = chem.formula || '';
+    formula.hidden = !chem.formula;
+  }
+  const cas = document.getElementById('tdsCas');
+  if (cas) {
+    cas.textContent = chem.cas ? `CAS No: ${chem.cas}` : '';
+    cas.hidden = !chem.cas;
+  }
+  const identitySection = document.getElementById('tdsIdentitySection');
+  if (identitySection) identitySection.hidden = !chem.formula && !chem.cas;
   document.getElementById('tdsCategory').textContent = chem.categoryName;
-  document.getElementById('tdsPurpose').textContent = chem.purpose;
-  document.getElementById('tdsApplication').textContent = chem.application;
-  document.getElementById('tdsDosage').textContent = chem.dosageRange;
-  document.getElementById('tdsSafety').textContent = chem.safety;
+  const purposeSection = document.getElementById('tdsPurposeSection');
+  if (purposeSection) purposeSection.hidden = !chem.purpose;
+  const purpose = document.getElementById('tdsPurpose');
+  if (purpose) purpose.textContent = chem.purpose || '';
+  const dosage = document.getElementById('tdsDosage');
+  if (dosage) dosage.textContent = chem.dosageRange || '';
+  const safety = document.getElementById('tdsSafety');
+  if (safety) safety.textContent = chem.safety || '';
+
+  const quickFacts = document.getElementById('tdsQuickFacts');
+  if (quickFacts) {
+    quickFacts.innerHTML = chem.quickFacts.map(fact => `
+      <div class="tds-quick-fact">
+        <div class="tds-label">${fact.label}</div>
+        <div>${fact.value}</div>
+      </div>
+    `).join('');
+  }
 
   // Specs Table
   const specsTableBody = document.getElementById('tdsSpecsTableBody');
@@ -178,6 +202,11 @@ function openTDSModal(chemicalId) {
         <td>${spec.value}</td>
       </tr>
     `).join('');
+  }
+
+  const handlingList = document.getElementById('tdsHandlingList');
+  if (handlingList) {
+    handlingList.innerHTML = chem.handling.map(item => `<li>${item}</li>`).join('');
   }
 
   // Packaging Pills
@@ -191,6 +220,63 @@ function openTDSModal(chemicalId) {
         ${pkg}
       </span>
     `).join('');
+  }
+
+  const applicationSection = document.getElementById('tdsApplicationSection');
+  if (applicationSection) {
+    applicationSection.hidden = !chem.application && !chem.dosageRange;
+    const applicationCard = document.getElementById('tdsApplicationCard');
+    if (applicationCard) applicationCard.hidden = !chem.application;
+    const dosageCard = document.getElementById('tdsDosageCard');
+    if (dosageCard) dosageCard.hidden = !chem.dosageRange;
+    const application = document.getElementById('tdsApplication');
+    if (application) application.textContent = chem.application || '';
+  }
+  const packagingSection = document.getElementById('tdsPackagingSection');
+  if (packagingSection) packagingSection.hidden = !chem.packaging.length;
+  const handlingSection = document.getElementById('tdsHandlingSection');
+  if (handlingSection) handlingSection.hidden = !chem.handling.length;
+  const quickFactsSection = document.getElementById('tdsQuickFactsSection');
+  if (quickFactsSection) quickFactsSection.hidden = !chem.quickFacts.length;
+  const specsSection = document.getElementById('tdsSpecsSection');
+  if (specsSection) specsSection.hidden = !chem.specs.length;
+  const safetyBox = document.getElementById('tdsSafetyBox');
+  if (safetyBox) safetyBox.hidden = !chem.safety;
+
+  if (safetyBox) {
+    safetyBox.classList.toggle('tds-safety-safe', chem.safety === 'Not classified as hazardous under GHS and not a dangerous good for transport. See the Safety Data Sheet for full details.');
+  }
+  const footerNote = document.getElementById('tdsFooterNote');
+  if (footerNote) {
+    footerNote.textContent = !chem.tdsLink && chem.sdsLink
+      ? 'Based on the Safety Data Sheet.'
+      : chem.tdsLink
+        ? 'Typical values. See the full TDS for details.'
+        : '';
+  }
+  const footerActions = document.getElementById('tdsFooterActions');
+  if (footerActions) {
+    const links = [];
+    if (chem.tdsLink) {
+      links.push(`<a class="btn btn-secondary btn-sm tds-pdf-action" href="${chem.tdsLink}" target="_blank" rel="noopener">View Full PDF</a>`);
+      links.push(`<a class="btn btn-primary btn-sm tds-pdf-action" href="${chem.tdsLink}" download>Download PDF</a>`);
+    }
+    if (chem.sdsLink) {
+      links.push(`<a class="btn btn-secondary btn-sm" href="${chem.sdsLink}" target="_blank" rel="noopener">View SDS</a>`);
+      links.push(`<a class="btn btn-primary btn-sm" href="${chem.sdsLink}" download>Download SDS</a>`);
+    }
+    footerActions.innerHTML = links.join('');
+    if (!chem.tdsLink) {
+      const requestButton = document.createElement('button');
+      requestButton.className = 'btn btn-primary btn-sm';
+      requestButton.type = 'button';
+      requestButton.textContent = 'Request TDS';
+      requestButton.addEventListener('click', () => {
+        closeAllModals();
+        document.querySelector('.contact-widget-launcher')?.click();
+      });
+      footerActions.appendChild(requestButton);
+    }
   }
 
   modal.classList.add('active');

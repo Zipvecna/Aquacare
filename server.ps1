@@ -38,6 +38,7 @@ $mimeTypes = @{
     ".jpg"  = "image/jpeg"
     ".jpeg" = "image/jpeg"
     ".png"  = "image/png"
+    ".pdf"  = "application/pdf"
     ".gif"  = "image/gif"
     ".svg"  = "image/svg+xml"
     ".ico"  = "image/x-icon"

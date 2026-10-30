@@ -10,7 +10,7 @@ See [public/privacy.html](public/privacy.html) for the visitor-facing notice. Re
 
 ## Deployment
 
-- The site is deployed on Vercel. Set the Vercel Output Directory to `public`; Vercel reads the production security headers from `vercel.json`.
+- The production site is [https://www.aquacaretrading.com](https://www.aquacaretrading.com), deployed on Vercel. Set the Vercel Output Directory to `public`; Vercel reads the production security headers from `vercel.json`.
 - Deploy `_headers` on a static host that supports this file format, such as Netlify or Cloudflare Pages. For other hosts, configure the same response headers in that host's settings or web-server configuration; merely uploading `_headers` does not activate headers on every platform.
 - Serve the production site only over HTTPS and configure the host to redirect HTTP to HTTPS. The HSTS header in `_headers` is effective only when delivered over HTTPS.
 - The preview server in `server.ps1` is for local development only. It uses HTTP and is not an internet-facing production server.

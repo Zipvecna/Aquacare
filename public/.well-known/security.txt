@@ -1,0 +1,3 @@
+Contact: mailto:aquacaretrading67@gmail.com
+Expires: 2027-12-31T00:00:00.000Z
+Canonical: https://www.aquacaretrading.com/.well-known/security.txt
