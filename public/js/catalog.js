@@ -41,6 +41,29 @@ function initChemicalCatalog() {
   // Initial render
   renderCards();
 
+  container.addEventListener('click', (event) => {
+    const tdsButton = event.target.closest('[data-action="open-tds"]');
+    if (tdsButton) {
+      const chemicalId = tdsButton.getAttribute('data-chemical-id');
+      if (chemicalId) {
+        openTDSModal(chemicalId);
+      } else {
+        console.error('Unable to open TDS: chemical ID is missing.');
+      }
+      return;
+    }
+
+    const requestButton = event.target.closest('[data-action="request-tds"]');
+    if (!requestButton) return;
+
+    const launcher = document.querySelector('.contact-widget-launcher');
+    if (launcher) {
+      launcher.click();
+    } else {
+      console.error('Unable to open the contact widget for a TDS request.');
+    }
+  });
+
   // Search Listener
   searchInput?.addEventListener('input', (e) => {
     searchTerm = e.target.value.toLowerCase().trim();
@@ -98,7 +121,9 @@ function initChemicalCatalog() {
         </div>
 
         <div class="chem-card-actions">
-          <button class="btn btn-secondary btn-sm" onclick="openTDSModal('${chem.id}')">
+          ${chem.tdsLink
+            ? `<button class="btn btn-secondary btn-sm" type="button" data-action="open-tds" data-chemical-id="${chem.id}">`
+            : '<button class="btn btn-secondary btn-sm" type="button" data-action="request-tds">'}
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
               <polyline points="14 2 14 8 20 8"></polyline>
@@ -106,8 +131,8 @@ function initChemicalCatalog() {
               <line x1="16" y1="17" x2="8" y2="17"></line>
               <polyline points="10 9 9 9 8 9"></polyline>
             </svg>
-            Full TDS
-          </button>
+            ${chem.tdsLink ? 'Full TDS' : 'TDS on request'}
+          ${chem.tdsLink ? '</button>' : '</button>'}
         </div>
       </div>
     `).join('');

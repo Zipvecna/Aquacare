@@ -258,12 +258,14 @@ function openTDSModal(chemicalId) {
   if (footerActions) {
     const links = [];
     if (chem.tdsLink) {
-      links.push(`<a class="btn btn-secondary btn-sm tds-pdf-action" href="${chem.tdsLink}" target="_blank" rel="noopener">View Full PDF</a>`);
-      links.push(`<a class="btn btn-primary btn-sm tds-pdf-action" href="${chem.tdsLink}" download>Download PDF</a>`);
+      const tdsPath = `/${chem.tdsLink.replace(/^\//, '')}`;
+      links.push(`<a class="btn btn-secondary btn-sm tds-pdf-action" href="${tdsPath}">View Full PDF</a>`);
+      links.push(`<a class="btn btn-primary btn-sm tds-pdf-action" href="${tdsPath}" download>Download PDF</a>`);
     }
     if (chem.sdsLink) {
-      links.push(`<a class="btn btn-secondary btn-sm" href="${chem.sdsLink}" target="_blank" rel="noopener">View SDS</a>`);
-      links.push(`<a class="btn btn-primary btn-sm" href="${chem.sdsLink}" download>Download SDS</a>`);
+      const sdsPath = `/${chem.sdsLink.replace(/^\//, '')}`;
+      links.push(`<a class="btn btn-secondary btn-sm" href="${sdsPath}">View SDS</a>`);
+      links.push(`<a class="btn btn-primary btn-sm" href="${sdsPath}" download>Download SDS</a>`);
     }
     footerActions.innerHTML = links.join('');
     if (!chem.tdsLink) {
