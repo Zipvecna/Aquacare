@@ -20,7 +20,7 @@ flowchart TD
 
 ## Main parts
 
-- **Pages:** `index.html` is the home page; `chemicals.html` presents the catalog; `applications.html` presents treatment applications. `privacy.html` is a standalone notice, and `water-hero.html` is a standalone visual page.
+- **Pages:** `index.html` is the home page; `chemicals.html` presents the catalog; `applications.html` presents treatment applications; `privacy.html` is a standalone notice.
 - **Data:** `js/data.js` defines company metadata and chemical entries, then exposes them as `window.AQUA_DATA`. This data is public because it is delivered to every browser.
 - **Shared UI:** `js/header.js` builds navigation/search UI; `js/app.js` handles shared rendering, modals, and interactions. `js/fuse-loader.js` imports Fuse.js and then imports the header module.
 - **Page and feature behavior:** `js/catalog.js` filters catalog data; `js/contact-widget.js` builds the contact form and opens an email or WhatsApp handoff; `js/water-ripple.js` and `js/hero-ripple.js` provide visual effects. `js/calculator.js` and `js/charts.js` contain feature helpers used where included.

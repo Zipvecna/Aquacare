@@ -16,9 +16,12 @@
   <meta property="og:description"
     content="Aqua Care is a Bangladesh-based water treatment company established in 2012, providing industrial water treatment chemicals and related solutions to industrial clients.">
   <meta property="og:url" content="https://www.aquacaretrading.com/">
-  <meta property="og:image" content="https://www.aquacaretrading.com/assets/images/hero.jpg">
+  <meta property="og:image" content="https://www.aquacaretrading.com/assets/images/hero-1600.webp">
 
   <!-- Core Stylesheets -->
+  <link rel="preload" as="image" href="assets/images/hero-1200.webp"
+    imagesrcset="assets/images/hero-1200.webp 1200w, assets/images/hero-1600.webp 1600w"
+    imagesizes="(max-width: 768px) 100vw, 50vw">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -72,8 +75,11 @@
             <div class="hero-visual"
               style="position: relative; border-radius: 24px; overflow: hidden; border: 1px solid var(--border-blue); box-shadow: var(--shadow-blue);">
               <!-- Animation #1: ken-burns-img triggers the slow 18s Ken Burns zoom keyframe -->
-              <img class="hero-visual-image ken-burns-img" src="assets/images/hero.jpg"
+              <img class="hero-visual-image ken-burns-img" src="assets/images/hero-1200.webp"
+                srcset="assets/images/hero-1200.webp 1200w, assets/images/hero-1600.webp 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 alt="Aqua Care Industrial Water Treatment Plant"
+                width="1600" height="893" loading="eager" fetchpriority="high" decoding="async"
                 style="width: 100%; height: 420px; object-fit: cover; display: block;">
               <div class="hero-visual-caption"
                 style="position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(180deg, transparent 0%, rgba(10, 37, 64, 0.92) 90%); color: #ffffff;">
@@ -109,7 +115,8 @@
           </div>
 
           <div class="about-company-photo">
-            <img src="assets/images/lab.jpg" alt="Aqua Care Water Treatment Laboratory">
+            <img src="assets/images/lab.webp" alt="Aqua Care Water Treatment Laboratory"
+              width="800" height="530" loading="lazy" decoding="async">
             <span class="about-company-photo-sheen" aria-hidden="true"></span>
             <div class="about-company-photo-badge">
                 Aqua Care • Est. 2012
@@ -137,35 +144,40 @@
         <div class="core-business-heading">Our Core Business Areas</div>
             <div class="core-business-grid">
               <div class="core-business-card">
-                <img src="assets/images/hero.jpg" alt="Industrial raw water clarification">
+                <img src="assets/images/hero-1200.webp" alt="Industrial raw water clarification"
+                  width="1200" height="670" loading="lazy" decoding="async">
                 <div class="core-business-card-copy">
                   <strong>Raw Water Clarification</strong>
                   <span>Coagulation and flocculation for clear process water.</span>
                 </div>
               </div>
               <div class="core-business-card">
-                <img src="https://images.pexels.com/photos/10040001/pexels-photo-10040001.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Industrial boiler and steam system">
+                <img src="assets/images/pexels-boiler.webp" alt="Industrial boiler and steam system"
+                  width="800" height="533" loading="lazy" decoding="async">
                 <div class="core-business-card-copy">
                   <strong>Boiler Water</strong>
                   <span>Protecting boilers from corrosion and scale.</span>
                 </div>
               </div>
               <div class="core-business-card">
-                <img src="https://images.pexels.com/photos/29155807/pexels-photo-29155807.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Industrial cooling tower system">
+                <img src="assets/images/pexels-cooling.webp" alt="Industrial cooling tower system"
+                  width="800" height="1422" loading="lazy" decoding="async">
                 <div class="core-business-card-copy">
                   <strong>Cooling Water</strong>
                   <span>Efficient heat transfer with dependable control.</span>
                 </div>
               </div>
               <div class="core-business-card">
-                <img src="https://images.pexels.com/photos/31257317/pexels-photo-31257317.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640" alt="Water treatment laboratory analysis">
+                <img src="assets/images/pexels-laboratory.webp" alt="Water treatment laboratory analysis"
+                  width="800" height="479" loading="lazy" decoding="async">
                 <div class="core-business-card-copy">
                   <strong>Ion Exchange</strong>
                   <span>High-purity water for demanding operations.</span>
                 </div>
               </div>
               <div class="core-business-card">
-                <img src="assets/images/reverse-osmosis.jpg" alt="Industrial reverse osmosis water treatment system">
+                <img src="assets/images/reverse-osmosis.webp" alt="Industrial reverse osmosis water treatment system"
+                  width="720" height="529" loading="lazy" decoding="async">
                 <div class="core-business-card-copy">
                   <strong>Reverse Osmosis</strong>
                   <span>Consistent membrane performance and water quality.</span>
@@ -362,7 +374,8 @@
         <div class="industry-grid" aria-label="Industries served">
           <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #F97316;">
             <div class="industry-photo-wrap">
-              <img class="industry-photo" src="assets/steel-mill.jpg" alt="Steel mill facility" loading="lazy">
+              <img class="industry-photo" src="assets/steel-mill.webp" alt="Steel mill facility"
+                width="800" height="533" loading="lazy" decoding="async">
             </div>
             <div class="industry-icon" aria-hidden="true">🏭</div>
             <div class="industry-card-body">
@@ -373,7 +386,8 @@
 
           <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #8B5CF6;">
             <div class="industry-photo-wrap">
-              <img class="industry-photo" src="assets/images/client-textile.jpg" alt="Textile and garments factory" loading="lazy">
+              <img class="industry-photo" src="assets/images/client-textile.webp" alt="Textile and garments factory"
+                width="735" height="490" loading="lazy" decoding="async">
             </div>
             <div class="industry-icon" aria-hidden="true">🧵</div>
             <div class="industry-card-body">
@@ -384,7 +398,8 @@
 
           <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #EC4899;">
             <div class="industry-photo-wrap">
-              <img class="industry-photo" src="assets/images/client-pharma.jpg" alt="Pharmaceutical manufacturing facility" loading="lazy">
+              <img class="industry-photo" src="assets/images/client-pharma.webp" alt="Pharmaceutical manufacturing facility"
+                width="800" height="436" loading="lazy" decoding="async">
             </div>
             <div class="industry-icon" aria-hidden="true">💊</div>
             <div class="industry-card-body">
@@ -395,7 +410,8 @@
 
           <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #16A34A;">
             <div class="industry-photo-wrap">
-              <img class="industry-photo" src="assets/images/client-food-processing.jpg" alt="Food and beverage processing plant" loading="lazy">
+              <img class="industry-photo" src="assets/images/client-food-processing.webp" alt="Food and beverage processing plant"
+                width="736" height="736" loading="lazy" decoding="async">
             </div>
             <div class="industry-icon" aria-hidden="true">🍽️</div>
             <div class="industry-card-body">
@@ -406,7 +422,8 @@
 
           <div class="glass-card industry-card fade-in-up" tabindex="0" style="--accent: #D97706;">
             <div class="industry-photo-wrap">
-              <img class="industry-photo" src="assets/images/cooling-plant.jpg" alt="Power and utilities plant" loading="lazy">
+              <img class="industry-photo" src="assets/images/cooling-plant.webp" alt="Power and utilities plant"
+                width="800" height="447" loading="lazy" decoding="async">
             </div>
             <div class="industry-icon" aria-hidden="true">⚡</div>
             <div class="industry-card-body">
@@ -480,7 +497,9 @@
         <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: stretch;" class="calc-grid contact-layout">
           <div class="contact-info-column">
             <div class="badge-tag" style="display: inline-block; align-self: flex-start;">Official Contact Information</div>
-            <img src="assets/logo.png" alt="Aqua Care Logo" class="contact-section-logo" style="display: block; margin: 8px auto -12px 0; width: 120px; height: 80px; max-width: 120px; object-fit: contain; position: relative; z-index: 1;">
+            <img src="assets/logo.webp" alt="Aqua Care Logo" class="contact-section-logo"
+              width="1024" height="682" loading="lazy" decoding="async"
+              style="display: block; margin: 8px auto -12px 0; width: 120px; height: 80px; max-width: 120px; object-fit: contain; position: relative; z-index: 1;">
 
             <div class="bg-white border rounded-xl shadow-sm p-6 contact-info-card" style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: 12px; box-shadow: var(--shadow-sm); padding: 20px; margin: 0;">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start contact-info-content" style="display:grid; grid-template-columns:repeat(1,minmax(0,1fr)); gap:1.5rem; align-items:start;">
@@ -538,7 +557,8 @@
         <!-- Brand identity block -->
         <div class="footer-brand">
           <a href="index.html" class="brand-logo" style="margin-bottom: 12px; display: inline-block;">
-            <img src="assets/logo.png" alt="Aqua Care - The Water Treatment Company" class="footer-logo-img">
+            <img src="assets/logo.webp" alt="Aqua Care - The Water Treatment Company" class="footer-logo-img"
+              width="1024" height="682" loading="lazy" decoding="async">
           </a>
           <div style="font-weight: 800; color: var(--blue-navy); font-size: 1rem; margin-bottom: 4px;">Aqua Care Trading
           </div>

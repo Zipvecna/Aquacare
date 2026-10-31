@@ -6,7 +6,7 @@ This repository is a static marketing and product catalog website for Aqua Care 
 
 ## Key structure
 
-- `index.html`, `chemicals.html`, `applications.html`, `privacy.html`, and `water-hero.html`: static pages; keep them in the repository root because their relative links and asset paths expect that location.
+- `index.html`, `chemicals.html`, `applications.html`, and `privacy.html`: static pages; keep them in the repository root because their relative links and asset paths expect that location.
 - `css/`: shared styles, components, and responsive overrides
 - `js/`: browser-side logic, shared data, and page behavior
 - `assets/`: images and branding assets

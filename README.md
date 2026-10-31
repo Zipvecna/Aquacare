@@ -11,7 +11,6 @@ aquaCare/
 |   |-- chemicals.html         Product catalog
 |   |-- applications.html      Treatment applications
 |   |-- privacy.html            Privacy notice
-|   |-- water-hero.html         Standalone water-hero page
 |   |-- css/
 |   |   |-- style.css          Shared base styles and theme
 |   |   |-- components.css     Shared component styles

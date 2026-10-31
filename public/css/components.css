@@ -253,7 +253,7 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/Boiler Water Chemical.jpg');
+  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/boiler-water-chemical.webp');
   background-size: cover;
   background-position: center;
   filter: blur(3px);
@@ -262,11 +262,11 @@
 }
 
 .glass-card.product-photo-card--cooling::after {
-  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/Cooling tower chemical.jpg');
+  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/cooling-tower-chemical.webp');
 }
 
 .glass-card.product-photo-card--ro::after {
-  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/Ro water chemical.jpg');
+  background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.92) 78%), url('../assets/images/ro-water-chemical.webp');
 }
 
 .glass-card.product-photo-card:hover {
@@ -1500,7 +1500,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 18px;
-  background-image: linear-gradient(90deg, rgba(10,37,64,0.82) 0%, rgba(10,37,64,0.55) 55%, rgba(10,37,64,0.28) 100%), url('../assets/images/Drinking Water treatment.jpg');
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.82) 0%, rgba(10,37,64,0.55) 55%, rgba(10,37,64,0.28) 100%), url('../assets/images/drinking-water-treatment.webp');
   background-size: cover;
   background-position: center;
 }
@@ -1628,7 +1628,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 18px;
-  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Industrial water treatment.jpg');
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/industrial-water-treatment.webp');
   background-size: cover;
   background-position: center;
 }
@@ -1647,7 +1647,7 @@
 }
 
 .glass-card.cooling-water-card {
-  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Cooling Water Treatment.jpg');
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/cooling-water-treatment.webp');
 }
 
 .cooling-water-card .industrial-water-detail-group > p {
@@ -1659,7 +1659,7 @@
 }
 
 .glass-card.ro-water-card {
-  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Reverse osmosis.png');
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/reverse-osmosis-system.webp');
 }
 
 .ro-water-card .ro-water-section-intro {
@@ -1707,7 +1707,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 18px;
-  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/Boiler Water Treatment.jpg');
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/boiler-water-treatment.webp');
   background-size: cover;
   background-position: center;
 }
@@ -2074,7 +2074,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 18px;
-  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/waste water treatment.jpg');
+  background-image: linear-gradient(90deg, rgba(10,37,64,0.92) 0%, rgba(10,37,64,0.72) 55%, rgba(10,37,64,0.45) 100%), url('../assets/images/waste-water-treatment.webp');
   background-size: cover;
   background-position: center;
 }
@@ -2286,17 +2286,17 @@
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/Industrial water treatment.jpg') center / cover;
+    background: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/industrial-water-treatment.webp') center / cover;
     content: '';
     transition: transform 0.7s ease;
   }
 
   #solutions .solutions-photo-card--boiler::before {
-    background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/Boiler Water Treatment.jpg');
+    background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/boiler-water-treatment.webp');
   }
 
   #solutions .solutions-photo-card--cooling::before {
-    background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/Cooling Water Treatment.jpg');
+    background-image: linear-gradient(180deg, rgba(10, 37, 64, 0.25) 0%, rgba(10, 37, 64, 0.55) 45%, rgba(10, 37, 64, 0.95) 100%), url('../assets/images/cooling-water-treatment.webp');
   }
 
   #solutions .solutions-photo-card:hover,

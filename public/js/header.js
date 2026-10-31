@@ -3,7 +3,7 @@ const SITE_HEADER_TEMPLATE = `
     <div class="container container-wide">
       <div class="nav-wrapper">
         <a href="index.html" class="brand-logo" aria-label="Aqua Care Home">
-          <img src="assets/logo.png" alt="Aqua Care - The Water Treatment Company" class="site-logo-img">
+          <img src="assets/logo.webp" alt="Aqua Care - The Water Treatment Company" class="site-logo-img" width="1024" height="682">
         </a>
 
         <nav class="nav-menu" aria-label="Main Navigation">
@@ -40,7 +40,7 @@ const SITE_HEADER_TEMPLATE = `
   <div class="mobile-drawer-overlay"></div>
   <div class="mobile-drawer">
     <div class="drawer-header">
-      <img src="assets/logo.png" alt="Aqua Care - The Water Treatment Company" class="drawer-logo-img">
+      <img src="assets/logo.webp" alt="Aqua Care - The Water Treatment Company" class="drawer-logo-img" width="1024" height="682">
       <button class="drawer-close-btn" aria-label="Close Mobile Menu">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
           <line x1="18" y1="6" x2="6" y2="18"></line>
